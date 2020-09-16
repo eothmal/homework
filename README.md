@@ -1,8 +1,8 @@
-if you have docker, you can try this command:
+if you have docker installed, you can try running with this command:
 
 docker run -p 8080:8080 eothmal/springboot-demo
 
-if you want to try the steps belows the old path without H2 database by prefix adding /pre
+You can still try the old path without H2 database by adding prefix in the url with /pre
     example: http://localhost:8080/pre/students
 
 1. List of Students:
