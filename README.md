@@ -1,12 +1,8 @@
-#
-H2 Console
-http://localhost:8080/h2-console
+if you have docker, you can try this command:
 
-setup:
-JDBC URL: jdbc:h2:mem:mydb
+docker run -p 8080:8080 eothmal/springboot-demo
 
-
-if you want to try the following steps below to the old path without H2 database, you can prefix with /pre
+if you want to try the steps belows the old path without H2 database by prefix adding /pre
     example: http://localhost:8080/pre/students
 
 1. List of Students:
@@ -69,4 +65,12 @@ Body(Json):
         "studentId": "2",
         "courseId": "JSB102"
     }
+
+
+
+H2 Console
+http://localhost:8080/h2-console
+
+setup:
+JDBC URL: jdbc:h2:mem:mydb
 
