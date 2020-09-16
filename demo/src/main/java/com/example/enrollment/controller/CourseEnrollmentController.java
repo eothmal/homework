@@ -1,0 +1,73 @@
+package com.example.enrollment.controller;
+
+import com.example.enrollment.handler.EnrollmentService;
+import com.example.enrollment.handler.StudentsCoursesMapping;
+import com.example.enrollment.model.Course;
+import com.example.enrollment.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
+
+@RestController
+public class CourseEnrollmentController {
+
+@Autowired private EnrollmentService enrollmentService;
+
+    @GetMapping("/pre/students")
+    public List<Student> getStudents() {
+        return enrollmentService.getStudents();
+    }
+
+    @GetMapping("/pre/courses")
+    public List<Course> getCourses() {
+        return enrollmentService.getCourses();
+    }
+
+    @GetMapping("/pre/students/{studentId}")
+        public Student getStudentDetails(@PathVariable String studentId) {
+        return  enrollmentService.retrieveStudent(studentId);
+    }
+
+    @GetMapping("/pre/courses/{courseId}")
+    public Course getCourseDetails(@PathVariable String courseId) {
+        return enrollmentService.retrieveCourse(courseId);
+    }
+
+    @PostMapping("/pre/students")
+    public String createStudent(@RequestBody Student student) {
+        enrollmentService.addStudent(student);
+        return "success";
+    }
+
+    @PostMapping("/pre/courses")
+    public String createCourse(@RequestBody Course course) {
+        enrollmentService.addCourse(course);
+        return "success";
+    }
+
+    @GetMapping("/pre/students/{studentId}/courses")
+    public List<Course> retrieveCoursesForAStudent(@PathVariable String studentId)
+    {
+        return enrollmentService.retrieveCoursesForAStudent(studentId);
+    }
+
+    @GetMapping("/pre/courses/{courseId}/students")
+    public List<Student> retrieveStudentsForACourse(@PathVariable String courseId)
+    {
+        return enrollmentService.retrieveStudentsForACourse(courseId);
+    }
+    @PostMapping("/pre/enroll")
+    public String enroll(@RequestBody Map<String, String> json) {
+        String studentId = json.get("studentId");
+        String courseId = json.get("courseId");
+        boolean ret = enrollmentService.enrollInACourse(studentId, courseId);
+        return ret ? "Success": "Failure";
+    }
+    @GetMapping("/pre/enroll")
+    public List<StudentsCoursesMapping> getStudentsCoursesMapping() {
+        return enrollmentService.getStudentsCoursesMappings();
+    }
+
+}
