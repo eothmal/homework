@@ -35,6 +35,8 @@ Body(Json):
 
 6. Add Course
 
+POST http://localhost:8080/courses
+
 Body(Json):
 
     {
@@ -65,6 +67,7 @@ Body(Json):
         "studentId": "2",
         "courseId": "JSB102"
     }
+
 
 
 
