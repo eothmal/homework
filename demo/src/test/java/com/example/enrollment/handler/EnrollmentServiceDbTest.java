@@ -6,9 +6,7 @@ import com.example.enrollment.dao.StudentsCoursesRepository;
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
 import com.example.enrollment.domain.StudentsCoursesMapping;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Any;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -28,6 +26,7 @@ import static org.mockito.internal.verification.VerificationModeFactory.times;
 @SpringBootTest
 class EnrollmentServiceDbTest {
 
+
     @MockBean
     private CourseRepository courseRepository;
     @MockBean
@@ -38,11 +37,6 @@ class EnrollmentServiceDbTest {
     @Autowired
     private EnrollmentServiceDb enrollmentService;
 
-//    @BeforeEach
-//    void setup() {
-//        enrollmentService = new EnrollmentServiceDb();
-//        Student student = new Student();
-//    }
 
     @Test
     void retrieveStudentTest() {

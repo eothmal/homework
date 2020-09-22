@@ -11,7 +11,7 @@ GET http://localhost:8080/students
 
 2. List of Courses:
 
-GET http://localhost:8080/students
+GET http://localhost:8080/courses
 
 3. Retrieve by studentid
 
@@ -66,10 +66,10 @@ Body(Json):
      "id": 4,
         "studentId": "2",
         "courseId": "JSB102"
-    }
+ }
 
-
-
+`
+`
 
 H2 Console
 http://localhost:8080/h2-console

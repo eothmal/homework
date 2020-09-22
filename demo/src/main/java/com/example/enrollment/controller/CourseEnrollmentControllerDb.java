@@ -37,14 +37,14 @@ public class CourseEnrollmentControllerDb {
 
     @PostMapping("/students")
     public String createStudent(@RequestBody Student student) {
-        enrollmentService.addStudent(student);
-        return "success";
+        boolean ret = enrollmentService.addStudent(student);
+        return ret ? "Success": "Failure";
     }
 
     @PostMapping("/courses")
     public String createCourse(@RequestBody Course course) {
-        enrollmentService.addCourse(course);
-        return "success";
+        boolean ret = enrollmentService.addCourse(course);
+        return ret ? "Success": "Failure";
     }
 
     @GetMapping("/students/{studentId}/courses")
@@ -67,7 +67,7 @@ public class CourseEnrollmentControllerDb {
         return ret ? "Success": "Failure";
     }
     @GetMapping("/enroll")
-    public Iterable<StudentsCoursesMapping> getStudentsCoursesMapping() {
+    public List<StudentsCoursesMapping> getStudentsCoursesMapping() {
         return enrollmentService.getStudentsCoursesMappings();
     }
 

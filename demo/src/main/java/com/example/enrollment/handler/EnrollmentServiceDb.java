@@ -72,15 +72,18 @@ public class EnrollmentServiceDb {
                 .collect(Collectors.toList());
     }
 
-    public void addCourse(Course course) {
-        courseRepository.save(course);;
+    public boolean addCourse(Course course) {
+        Course ret = courseRepository.save(course);
+        return ret !=null ? true: false;
     }
 
-    public void addStudent(Student student) {
-        studentRepository.save(student);;
+    public boolean addStudent(Student student) {
+        Student ret = studentRepository.save(student);;
+        return ret !=null ? true: false;
     }
 
-    public Iterable<StudentsCoursesMapping> getStudentsCoursesMappings() {
-        return studentsCoursesRepository.findAll();
+    public List<StudentsCoursesMapping> getStudentsCoursesMappings() {
+        return StreamSupport.stream(studentsCoursesRepository.findAll().spliterator(), false)
+                .collect(Collectors.toList());
     }
 }
