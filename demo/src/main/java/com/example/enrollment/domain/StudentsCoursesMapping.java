@@ -1,11 +1,14 @@
 package com.example.enrollment.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class StudentsCoursesMapping {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String studentId;
     private String courseId;
@@ -13,8 +16,8 @@ public class StudentsCoursesMapping {
     public StudentsCoursesMapping() {
     }
 
-    public StudentsCoursesMapping(int id, String studentId, String courseId) {
-        this.id = id;
+    public StudentsCoursesMapping(String studentId, String courseId) {
+        super();
         this.studentId = studentId;
         this.courseId = courseId;
     }

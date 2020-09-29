@@ -1,7 +1,7 @@
 package com.example.enrollment.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -9,6 +9,7 @@ public class Student {
     private String lastName;
     private String email;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String studentId;
 
     public Student() {
@@ -20,6 +21,13 @@ public class Student {
         this.email = email;
         this.studentId = studentId;
     }
+
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
+            fetch = FetchType.LAZY)
+    @JoinTable(name = "students_courses" ,
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private List<Course> courses;
 
     public String getFirstName() {
         return firstName;
@@ -53,4 +61,11 @@ public class Student {
         this.studentId = studentId;
     }
 
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
 }

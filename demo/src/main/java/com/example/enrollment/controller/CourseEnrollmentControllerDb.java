@@ -60,10 +60,9 @@ public class CourseEnrollmentControllerDb {
     }
     @PostMapping("/enroll")
     public String enroll(@RequestBody Map<String, String> json) {
-        String id = json.get("id");
         String studentId = json.get("studentId");
         String courseId = json.get("courseId");
-        boolean ret = enrollmentService.enrollInACourse(id, studentId, courseId);
+        boolean ret = enrollmentService.enrollInACourse(studentId, courseId);
         return ret ? "Success": "Failure";
     }
     @GetMapping("/enroll")

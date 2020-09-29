@@ -5,7 +5,6 @@ import com.example.enrollment.dao.StudentRepository;
 import com.example.enrollment.dao.StudentsCoursesRepository;
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
-import com.example.enrollment.domain.StudentsCoursesMapping;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -59,38 +58,37 @@ class EnrollmentServiceDbTest {
         String id = "1";
         String courseId = "PY101";
         String studentId = "1";
-        StudentsCoursesMapping studentsCoursesMapping =
-                new StudentsCoursesMapping(Integer.valueOf(id), studentId, courseId);
-        when(studentsCoursesRepository.save(any(StudentsCoursesMapping.class))).thenReturn(studentsCoursesMapping);
-        assertEquals(true, enrollmentService.enrollInACourse(id, studentId, courseId));
-//        assertEquals(course, enrollmentService.retrieveCourse(courseId));
+        Course course = new Course();
+        List<Student> students = new ArrayList<>();
+        course.setStudents(students);
+        List<Course> courses = new ArrayList<>();
+        Student student = new Student();
+        student.setCourses(courses);
+        when(courseRepository.findById(courseId)).thenReturn(Optional.of(course));
+        when(courseRepository.save(any(Course.class))).thenReturn(course);
+        when(studentRepository.findById(studentId)).thenReturn(Optional.of(student));
+        when(studentRepository.save(any(Student.class))).thenReturn(student);
+        assertEquals(true, enrollmentService.enrollInACourse(studentId, courseId));
     }
 
     @Test
     void retrieveCoursesForAStudentTest() {
         String studentId = "1";
-        StudentsCoursesMapping studentsCoursesMapping = new StudentsCoursesMapping(1, "1", "PY101");
-        List<StudentsCoursesMapping> studentsCoursesMappings = new ArrayList<>();
-        studentsCoursesMappings.add(studentsCoursesMapping);
         List<Course> courses = new ArrayList<>();
-        Course course = new Course("Python", "Irving", "PY101");
-        courses.add(course);
-        when(studentsCoursesRepository.findByStudentId(studentId)).thenReturn(studentsCoursesMappings);
-        when(courseRepository.findById(studentsCoursesMapping.getCourseId())).thenReturn(Optional.of(course));
+        Student student = new Student("first", "last", "flast@mail.com", "1");
+        student.setCourses(courses);
+
+        when(studentRepository.findById(studentId)).thenReturn(Optional.of(student));
         assertEquals(courses, enrollmentService.retrieveCoursesForAStudent(studentId));
     }
 
     @Test
     void retrieveStudentsForACourseTest() {
         String courseId = "PY101";
-        StudentsCoursesMapping studentsCoursesMapping = new StudentsCoursesMapping(1, "1", "PY101");
-        List<StudentsCoursesMapping> studentsCoursesMappings = new ArrayList<>();
-        studentsCoursesMappings.add(studentsCoursesMapping);
+        Course course = new Course("Python", "Irving", courseId);
         List<Student> students = new ArrayList<>();
-        Student student = new Student("first", "last", "flast@mail.com", "1");
-        students.add(student);
-        when(studentsCoursesRepository.findByCourseId(courseId)).thenReturn(studentsCoursesMappings);
-        when(studentRepository.findById(studentsCoursesMapping.getStudentId())).thenReturn(Optional.of(student));
+        course.setStudents(students);
+        when(courseRepository.findById(courseId)).thenReturn(Optional.of(course));
         assertEquals(students, enrollmentService.retrieveStudentsForACourse(courseId));
     }
 

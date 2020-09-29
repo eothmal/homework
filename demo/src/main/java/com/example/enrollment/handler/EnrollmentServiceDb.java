@@ -32,33 +32,39 @@ public class EnrollmentServiceDb {
         return courseRepository.findById(courseId).get();
     }
 
-    public boolean enrollInACourse(String id,String studentId, String courseId) {
-        StudentsCoursesMapping studentsCoursesMapping =
-                new StudentsCoursesMapping(Integer.valueOf(id), studentId, courseId);
-        StudentsCoursesMapping ret = studentsCoursesRepository.save(studentsCoursesMapping);
-        return ret != null ? true : false;
+    public boolean enrollInACourse(String studentId, String courseId) {
+        Student student = studentRepository.findById(studentId).get();
+        Course course = courseRepository.findById(courseId).get();
+
+        List<Course> courses = student.getCourses();
+        if (courses == null){
+            courses = new ArrayList<>();
+        }
+        courses.add(course);
+        student.setCourses(courses);
+
+        Student ret1 = studentRepository.save(student);
+
+        List<Student> students = course.getStudents();
+        if (students == null){
+            students = new ArrayList<>();
+        }
+        students.add(student);
+        course.setStudents(students);
+
+        Course ret2 = courseRepository.save(course);
+
+        return (ret1 != null && ret2 != null)  ? true : false;
     }
 
     public List<Course> retrieveCoursesForAStudent(String studentId) {
-        List<StudentsCoursesMapping> studentsCoursesMappings = studentsCoursesRepository.findByStudentId(studentId);
 
-        List<Course> courses = new ArrayList<>();
-        for (StudentsCoursesMapping courseMapping : studentsCoursesMappings) {
-            Course course = courseRepository.findById(courseMapping.getCourseId()).get();
-            courses.add(course);
-        }
-        return courses;
+        return studentRepository.findById(studentId).get().getCourses();
     }
 
     public List<Student> retrieveStudentsForACourse(String courseId) {
-        List<StudentsCoursesMapping> studentsCoursesMappings = studentsCoursesRepository.findByCourseId(courseId);
 
-        List<Student> students = new ArrayList<>();
-        for (StudentsCoursesMapping studentMapping : studentsCoursesMappings) {
-            Student student = studentRepository.findById(studentMapping.getStudentId()).get();
-            students.add(student);
-        }
-        return students;
+        return courseRepository.findById(courseId).get().getStudents();
     }
 
     public List<Course> getCourses() {

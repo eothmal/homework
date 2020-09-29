@@ -37,7 +37,7 @@ class CourseEnrollmentControllerDbTest {
 
     private List<Student> students;
     private List<Course> courses;
-    private List<StudentsCoursesMapping> studentsCoursesMappings;
+    private List<StudentsCoursesMapping> studentsCoursesMappingMappings;
 
     @BeforeEach
     void setup() {
@@ -50,10 +50,10 @@ class CourseEnrollmentControllerDbTest {
         course = new Course("Python", "Irving", "PY101");
         courses.add(course);
 
-        studentsCoursesMappings = new ArrayList<>();
-        studentsCoursesMapping =
-                new StudentsCoursesMapping(1, "1", "PY101");
-        studentsCoursesMappings.add(studentsCoursesMapping);
+        studentsCoursesMappingMappings = new ArrayList<>();
+//        studentsCoursesMapping =
+//                new StudentsCoursesMapping(1, "1", "PY101");
+//        studentsCoursesMappingMappings.add(studentsCoursesMapping);
 
     }
 
@@ -152,7 +152,7 @@ class CourseEnrollmentControllerDbTest {
 
     @Test
     void enrollTest() throws Exception {
-        when(enrollmentService.enrollInACourse("1", "1", "PY101")).thenReturn(true);
+//        when(enrollmentService.enrollInACourse("1", "1", "PY101")).thenReturn(true);
         mockMvc.perform(post("/enroll").contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(studentsCoursesMapping)))
                 .andExpect(status().isOk());
@@ -160,7 +160,7 @@ class CourseEnrollmentControllerDbTest {
 
     @Test
     void getStudentsCoursesMappingTest() throws Exception {
-        when(enrollmentService.getStudentsCoursesMappings()).thenReturn(studentsCoursesMappings);
+        when(enrollmentService.getStudentsCoursesMappings()).thenReturn(studentsCoursesMappingMappings);
         mockMvc.perform(get("/enroll")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
