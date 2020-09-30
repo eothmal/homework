@@ -1,6 +1,6 @@
 if you have docker installed, you can try running with this command:
 
-docker run -p 8080:8080 eothmal/springboot-demo
+docker run -p 8080:8080 eothmal/spring-boot-docker
 
 You can still try the old path without H2 database by adding prefix in the url with /pre
     example: http://localhost:8080/pre/students
@@ -63,7 +63,6 @@ POST http://localhost:8080/enroll
 
 Body(Json):
  {
-     "id": 4,
         "studentId": "2",
         "courseId": "JSB102"
  }
