@@ -2,7 +2,6 @@ package com.example.enrollment.handler;
 
 import com.example.enrollment.dao.CourseRepository;
 import com.example.enrollment.dao.StudentRepository;
-import com.example.enrollment.dao.StudentsCoursesRepository;
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
 import org.junit.jupiter.api.Test;
@@ -20,19 +19,13 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
-//@ExtendWith(SpringExtension.class)
-//@AutoConfigureMockMvc
 @SpringBootTest
 class EnrollmentServiceDbTest {
-
 
     @MockBean
     private CourseRepository courseRepository;
     @MockBean
     private StudentRepository studentRepository;
-    @MockBean
-    private StudentsCoursesRepository studentsCoursesRepository;
-
     @Autowired
     private EnrollmentServiceDb enrollmentService;
 

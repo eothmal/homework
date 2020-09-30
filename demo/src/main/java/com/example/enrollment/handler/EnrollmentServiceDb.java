@@ -2,10 +2,9 @@ package com.example.enrollment.handler;
 
 import com.example.enrollment.dao.CourseRepository;
 import com.example.enrollment.dao.StudentRepository;
-import com.example.enrollment.dao.StudentsCoursesRepository;
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
-import com.example.enrollment.domain.StudentsCoursesMapping;
+//import com.example.enrollment.domain.StudentsCoursesMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,8 +20,6 @@ public class EnrollmentServiceDb {
     private CourseRepository courseRepository;
     @Autowired
     private StudentRepository studentRepository;
-    @Autowired
-    private StudentsCoursesRepository studentsCoursesRepository;
 
     public Student retrieveStudent(String studentId) {
         return studentRepository.findById(studentId).get();
@@ -37,7 +34,7 @@ public class EnrollmentServiceDb {
         Course course = courseRepository.findById(courseId).get();
 
         List<Course> courses = student.getCourses();
-        if (courses == null){
+        if (courses == null) {
             courses = new ArrayList<>();
         }
         courses.add(course);
@@ -46,7 +43,7 @@ public class EnrollmentServiceDb {
         Student ret1 = studentRepository.save(student);
 
         List<Student> students = course.getStudents();
-        if (students == null){
+        if (students == null) {
             students = new ArrayList<>();
         }
         students.add(student);
@@ -54,7 +51,7 @@ public class EnrollmentServiceDb {
 
         Course ret2 = courseRepository.save(course);
 
-        return (ret1 != null && ret2 != null)  ? true : false;
+        return (ret1 != null && ret2 != null) ? true : false;
     }
 
     public List<Course> retrieveCoursesForAStudent(String studentId) {
@@ -80,16 +77,26 @@ public class EnrollmentServiceDb {
 
     public boolean addCourse(Course course) {
         Course ret = courseRepository.save(course);
-        return ret !=null ? true: false;
+        return ret != null ? true : false;
     }
 
     public boolean addStudent(Student student) {
-        Student ret = studentRepository.save(student);;
-        return ret !=null ? true: false;
+        Student ret = studentRepository.save(student);
+        ;
+        return ret != null ? true : false;
     }
 
     public List<StudentsCoursesMapping> getStudentsCoursesMappings() {
-        return StreamSupport.stream(studentsCoursesRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
+        Iterable<Student> students = studentRepository.findAll();
+        List<StudentsCoursesMapping> studentsCoursesMappings = new ArrayList<>();
+        for (Student student : students) {
+            for (Course course : student.getCourses()) {
+                StudentsCoursesMapping studentsCoursesMapping =
+                        new StudentsCoursesMapping(student.getStudentId(), course.getCourseId());
+                studentsCoursesMappings.add(studentsCoursesMapping);
+            }
+
+        }
+        return studentsCoursesMappings;
     }
 }

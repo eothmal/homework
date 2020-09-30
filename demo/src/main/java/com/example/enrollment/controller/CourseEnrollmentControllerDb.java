@@ -2,7 +2,7 @@ package com.example.enrollment.controller;
 
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
-import com.example.enrollment.domain.StudentsCoursesMapping;
+import com.example.enrollment.handler.StudentsCoursesMapping;
 import com.example.enrollment.handler.EnrollmentServiceDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

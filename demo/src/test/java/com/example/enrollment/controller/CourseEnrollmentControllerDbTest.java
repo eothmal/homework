@@ -2,7 +2,7 @@ package com.example.enrollment.controller;
 
 import com.example.enrollment.domain.Course;
 import com.example.enrollment.domain.Student;
-import com.example.enrollment.domain.StudentsCoursesMapping;
+import com.example.enrollment.handler.StudentsCoursesMapping;
 import com.example.enrollment.handler.EnrollmentServiceDb;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,9 +51,9 @@ class CourseEnrollmentControllerDbTest {
         courses.add(course);
 
         studentsCoursesMappingMappings = new ArrayList<>();
-//        studentsCoursesMapping =
-//                new StudentsCoursesMapping(1, "1", "PY101");
-//        studentsCoursesMappingMappings.add(studentsCoursesMapping);
+        studentsCoursesMapping =
+                new StudentsCoursesMapping("1", "PY101");
+        studentsCoursesMappingMappings.add(studentsCoursesMapping);
 
     }
 
@@ -152,7 +152,7 @@ class CourseEnrollmentControllerDbTest {
 
     @Test
     void enrollTest() throws Exception {
-//        when(enrollmentService.enrollInACourse("1", "1", "PY101")).thenReturn(true);
+        when(enrollmentService.enrollInACourse("1","PY101")).thenReturn(true);
         mockMvc.perform(post("/enroll").contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(studentsCoursesMapping)))
                 .andExpect(status().isOk());
@@ -166,7 +166,6 @@ class CourseEnrollmentControllerDbTest {
                 .andExpect(status().isOk())
                 .andExpect((jsonPath("$", hasSize(1))))
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[*].id").value(1))
                 .andExpect(jsonPath("$[*].studentId").value("1"))
                 .andExpect(jsonPath("$[*].courseId").value("PY101"));
     }
