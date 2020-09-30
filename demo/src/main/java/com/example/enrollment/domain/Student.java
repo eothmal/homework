@@ -1,9 +1,12 @@
 package com.example.enrollment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@JsonIgnoreProperties({"courses" })
 public class Student {
     private String firstName;
     private String lastName;
