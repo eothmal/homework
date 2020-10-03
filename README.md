@@ -2,9 +2,11 @@ You will be able to test the Spring Boot sample code with Docker
 
 docker run -p 8080:8080 eothmal/springboot-demo-docker
 
-I.    Original Code         : Test with Postman: GET/POST http://localhost:8080/pre/  (original code, without H2)
-II.   Add H2 database       : Test with Postman: GET/POST http://localhost:8080/students ...etc  (original code, with H2 - you can find iin the bottom about H2-console)
-III.  Add UI with Thymeleaf : Test with Browser: http://localhost:8080 (with frames) or http://localhost:8080/base/all (without frames)
+I.    Original Code         : Test with Postman: GET/POST http://localhost:8080/pre/  (original code, without H2).
+
+II.   Add H2 database       : Test with Postman: GET/POST http://localhost:8080/students ...etc  (original code, with H2 - you can find iin the bottom about H2-console).
+
+III.  Add UI with Thymeleaf : Test with Browser: http://localhost:8080 (with frames) or http://localhost:8080/base/all (without frames).
 
 
 I & II
