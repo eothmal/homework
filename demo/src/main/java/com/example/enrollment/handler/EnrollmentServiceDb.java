@@ -42,16 +42,17 @@ public class EnrollmentServiceDb {
 
         Student ret1 = studentRepository.save(student);
 
-        List<Student> students = course.getStudents();
-        if (students == null) {
-            students = new ArrayList<>();
-        }
-        students.add(student);
-        course.setStudents(students);
-
-        Course ret2 = courseRepository.save(course);
-
-        return (ret1 != null && ret2 != null) ? true : false;
+//        List<Student> students = course.getStudents();
+//        if (students == null) {
+//            students = new ArrayList<>();
+//        }
+//        students.add(student);
+//        course.setStudents(students);
+//
+//        Course ret2 = courseRepository.save(course);
+//
+//        return (ret1 != null && ret2 != null) ? true : false;
+        return (ret1 != null ) ? true : false;
     }
 
     public List<Course> retrieveCoursesForAStudent(String studentId) {
