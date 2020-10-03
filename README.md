@@ -1,8 +1,16 @@
-if you have docker installed, you can try running with this command:
+You will be able to test the Spring Boot sample code with Docker
 
-docker run -p 8080:8080 eothmal/spring-boot-docker
+docker run -p 8080:8080 eothmal/springboot-demo-docker
 
-You can still try the old path without H2 database by adding prefix in the url with /pre
+I.    Original Code         : Test with Postman: GET/POST http://localhost:8080/pre/  (original code, without H2)
+II.   Add H2 database       : Test with Postman: GET/POST http://localhost:8080/students ...etc  (original code, with H2 - you can find iin the bottom about H2-console)
+III.  Add UI with Thymeleaf : Test with Browser: http://localhost:8080 (with frames) or http://localhost:8080/base/all (without frames)
+
+
+I & II
+POSTMAN Test:
+
+The original code without H2 database by adding prefix in the url with /pre
     example: http://localhost:8080/pre/students
 
 1. List of Students:
@@ -45,11 +53,11 @@ Body(Json):
         "courseId": "PYT101"
     }
 `
-7. Retrieve a list of courses by student id
+7. Retrieve Courses by student id
 
 GET http://localhost:8080/students/4/courses
 
-8. Retrieve a list of students by course id
+8. Retrieve Students by course id
 
 GET http://localhost:8080/courses/JSB102/students
 
@@ -69,8 +77,7 @@ Body(Json):
 
 `
 `
-
-H2 Console
+Access H2 console:
 http://localhost:8080/h2-console
 
 setup:
