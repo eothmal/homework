@@ -1,7 +1,7 @@
-INSERT INTO STUDENT  VALUES('1','ikl.ahmed@outmail.com','Ikhlas','Alhamd');
-INSERT INTO STUDENT  VALUES('2','mtoha1000@outmail.com','Mohammed','Toha');
-INSERT INTO STUDENT  VALUES('3','rosnhhold@outmail.com','Anees', 'Bel');
-INSERT INTO STUDENT  VALUES('4','hmutar@outmail.com','Herman', 'Mutar');
+INSERT INTO STUDENT  VALUES('1','edwin.okay@outmail.com','Edwin','Okay');
+INSERT INTO STUDENT  VALUES('2','erianto.kayo@outmail.com','Erianto','Kayo');
+INSERT INTO STUDENT  VALUES('3','Jim.Steel@outmail.com','James', 'Steel');
+INSERT INTO STUDENT  VALUES('4','hmaklum@outmail.com','Herman', 'Maklum');
 
 INSERT INTO COURSE VALUES('JSB102','Java Spring boot', 'Rahman');
 INSERT INTO COURSE VALUES('AWS101','Amazon Web Service','EPIC');
