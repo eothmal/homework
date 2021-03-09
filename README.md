@@ -1,4 +1,9 @@
-You will be able to test the Spring Boot sample code with Docker
+
+$cd demo
+$gradle build
+$java -jar buid/libs/*.jar -Dserver.port:8080
+
+You will also be able to test the Spring Boot sample code with Docker
 
 docker run -p 8080:8080 eothmal/springboot-demo-docker
 
