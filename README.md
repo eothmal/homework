@@ -1,9 +1,9 @@
 
 $cd demo
-$gradle build
-$java -jar buid/libs/*.jar -Dserver.port:8080
-or
-$gradle bootRun
+$gradle build   
+$java -jar buid/libs/*.jar -Dserver.port:8080  
+or  
+$gradle bootRun  
 
 You will also be able to test the Spring Boot sample code with Docker
 
@@ -41,7 +41,11 @@ GET http://localhost:8080/courses/JSB102
 5. Add Student
 
 POST http://localhost:8080/students
-
+  
+To make a request with JSON, the appropriate HTTP headers are:  
+Content-Type: application/json  
+Accept: application/json  
+  
 Body(Json):
  {
         "firstName": "Edwin",
@@ -54,6 +58,10 @@ Body(Json):
 
 POST http://localhost:8080/courses
 
+To make a request with JSON, the appropriate HTTP headers are:  
+Content-Type: application/json  
+Accept: application/json  
+  
 Body(Json):
 
     {
