@@ -1,5 +1,5 @@
 
-$cd demo
+$cd demo  
 $gradle build   
 $java -jar buid/libs/*.jar -Dserver.port:8080  
 or  
