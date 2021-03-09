@@ -2,6 +2,8 @@
 $cd demo
 $gradle build
 $java -jar buid/libs/*.jar -Dserver.port:8080
+or
+$gradle bootRun
 
 You will also be able to test the Spring Boot sample code with Docker
 
