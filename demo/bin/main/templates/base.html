@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+    div {
+  background-color: lightblue;
+  background-size: contain;
+  background-position: left center;
+    }
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<h2>1. List of Students:</h2>
+</div>
+<form action="/web/students" method="get">
+    <p><input type="submit" value="List of Students" /> </p>
+</form>
+<div>
+<h2>2. List of Courses:</h2>
+</div>
+<form action="/web/courses" method="get">
+    <p><input type="submit" value="List of Courses" /> </p>
+</form>
+<div>
+<h2>3. Student Detail by studentId</h2>
+</div>
+<form action="/web/students/"
+      onsubmit="this.action = this.action + this.studentId.value; this.submit();">
+    <p>StudentId:  <input type="text" name="studentId" size="10"> <input type="submit" value="Search"> </p>
+</form>
+<div>
+<h2>4. Course Detail by courseId</h2>
+</div>
+<form action="/web/courses/"
+      onsubmit="this.action = this.action + this.courseId.value; this.submit();">
+    <p>CourseId:  <input type="text" name="courseId" size="15"> <input type="submit" value="Search"> </p>
+</form>
+<div>
+<h2>5. Add Student</h2>
+</div>
+<form action="/web/students" method="post" th:Object="${studentData}">
+    <p>First Name: <input type="text" th:field="${studentData.firstName}" /> </p>
+    <p>Last Name: <input type="text" th:field="${studentData.lastName}" /> </p>
+    <p>Email: <input type="text" th:field="${studentData.email}" /> </p>
+    <p>StudentId: <input type="text " th:field="${studentData.studentId}" value="will be generated"/> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+<div>
+<h2>6. Add Course</h2>
+</div>
+<form action="/web/courses" method="post" th:Object="${courseData}">
+    <p>Course Name: <input type="text" th:field="${courseData.name}" /> </p>
+    <p>Offered By: <input type="text" th:field="${courseData.offeredBy}" /> </p>
+    <p>Course Id: <input type="text" th:field="${courseData.courseId}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+<div>
+<h2>7. Retrieve Courses by student id</h2>
+</div>
+<form action="/web/students/courses/"
+      onsubmit="this.action = this.action + this.studentId.value ; this.submit();">
+    <p>StudentId:  <input type="text" name="studentId" size="10"> <input type="submit" value="Search"> </p>
+</form>
+<div>
+<h2>8. Retrieve Students by course id</h2>
+</div>
+<form action="/web/courses/students/"
+      onsubmit="this.action = this.action + this.courseId.value; this.submit();">
+    <p>CourseId:  <input type="text" name="courseId" size="15"> <input type="submit" value="Search"> </p>
+</form>
+<div>
+<h2>9. List of Enroll</h2>
+</div>
+<form action="/web/enroll" method="get" >
+    <p> <input type="submit" value="List of Enroll"> </p>
+</form>
+<div>
+<h2>10. Add Enrollment</h2>
+</div>
+<form action="/web/enroll" method="post" th:Object="${studentsCoursesMapping}">
+    <p>Student Id: <input type="text" th:field="${studentsCoursesMapping.studentId}" /> </p>
+    <p>Course Id: <input type="text" th:field="${studentsCoursesMapping.courseId}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+</body>
+</html>

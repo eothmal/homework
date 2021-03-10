@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses </title>
+</head>
+<body>
+<h1>Enrollemnt</h1>
+<table border="2" style="width:50%">
+    <tr>
+        <th>Student Id</th>
+        <th>Course Id</th>
+    </tr>
+<tr th:each="studentsCoursesMapping: ${studentsCoursesMappings}">
+    <td th:text="${studentsCoursesMapping.studentId}" />
+    <td th:text="${studentsCoursesMapping.courseId}" />
+</tr>
+</table>
+</body>
+</html>

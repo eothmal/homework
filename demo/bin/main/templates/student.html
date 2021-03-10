@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Title</title>
+</head>
+<body>
+<div class="headDiv">
+<h1>Student Domain: </h1>
+</div>
+<div class="itemDiv">
+<h2>1. List of Students:</h2>
+</div>
+<form action="/web/students" method="get">
+    <p><input type="submit" value="List of Students" /> </p>
+</form>
+<div class="itemDiv">
+<h2>3. Student Detail by studentId</h2>
+</div>
+<form action="/web/students/"
+      onsubmit="this.action = this.action + this.studentId.value; this.submit();">
+    <p>StudentId:  <input type="text" name="studentId" size="10"> <input type="submit" value="Search"> </p>
+</form>
+<div class="itemDiv">
+<h2>5. Add Student</h2>
+</div>
+<form action="/web/students" method="post" th:Object="${studentData}">
+    <p>First Name: <input type="text" th:field="${studentData.firstName}" /> </p>
+    <p>Last Name: <input type="text" th:field="${studentData.lastName}" /> </p>
+    <p>Email: <input type="text" th:field="${studentData.email}" /> </p>
+    <p>StudentId: <input type="text " th:field="${studentData.studentId}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+<div class="itemDiv">
+<h2>8. Retrieve Students by course id</h2>
+</div>
+<form action="/web/courses/students/"
+      onsubmit="this.action = this.action + this.courseId.value; this.submit();">
+    <p>CourseId:  <input type="text" name="courseId" size="15"> <input type="submit" value="Search"> </p>
+</form>
+</body>
+</html>

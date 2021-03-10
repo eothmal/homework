@@ -1,16 +1,23 @@
 package com.example.enrollment.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
 @JsonIgnoreProperties({"students"})
 public class Course {
+    @NotBlank(message = "Course name is required")
     private String name;
+    @NotBlank(message = "Course OfferBy is required")
     private String offeredBy;
     @Id
+    @NonNull
+    @Size(min=6,max = 6)
     private String courseId;
 
     public Course() {

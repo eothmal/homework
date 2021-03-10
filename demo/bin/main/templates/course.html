@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Title</title>
+</head>
+<body>
+<div class="headDiv">
+<h1>Course Domain: </h1>
+</div>
+<div class="itemDiv">
+<h2>2. List of Courses: </h2>
+</div>
+<form action="/web/courses" method="get">
+    <p><input type="submit" value="List of Courses" /> </p>
+</form>
+<div class="itemDiv">
+<h2>4. Course Detail by courseId</h2>
+</div>
+<form action="/web/courses/"
+      onsubmit="this.action = this.action + this.courseId.value; this.submit();">
+    <p>CourseId:  <input type="text" name="courseId" size="15"> <input type="submit" value="Search"> </p>
+</form>
+<div class="itemDiv">
+<h2>6. Add Course</h2>
+</div>
+<form action="/web/courses" method="post" th:Object="${courseData}">
+    <p>Course Name: <input type="text" th:field="${courseData.name}" /> </p>
+    <p>Offered By: <input type="text" th:field="${courseData.offeredBy}" /> </p>
+    <p>Course Id: <input type="text" th:field="${courseData.courseId}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+<div class="itemDiv">
+<h2>7. Retrieve Courses by student id</h2>
+</div>
+<form action="/web/students/courses/"
+      onsubmit="this.action = this.action + this.studentId.value ; this.submit();">
+    <p>StudentId:  <input type="text" name="studentId" size="10"> <input type="submit" value="Search"> </p>
+</form>
+
+</body>
+</html>

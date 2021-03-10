@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Default Error Page</h1>
+
+<!--  Note that Thymeleaf provides access to the URL anyway via
+      ${#httpServletRequest}, see below, but it's not so easy in
+      JSP for example. -->
+<p th:if="${url}">
+    <b>Page:</b> <span th:text="${url}">Page URL</span>
+</p>
+
+<p th:if="${url == null}">
+    <b>URL:</b> <span th:text="${#httpServletRequest.requestURL}">Request
+			URL</span>
+</p>
+
+<p th:if="${timestamp}" id='created'>
+    <b>Occurred:</b> <span th:text="${timestamp}">Timestamp</span>
+</p>
+
+<p th:if="${status}">
+    <b>Response Status:</b> <span th:text="${status}">status-code</span> <span
+        th:if="${error}" th:text="'('+${error}+')'">error ...</span>
+</p>
+
+<!--/* ${ex} is set by ourSimpleMappingExceptionResolver,
+       ${exception} or ${message} are set internally by Spring Boot. */-->
+<div
+        th:if="${ex} or ${exception} or (${message} and ${message.length() != 0})">
+    <b>Cause:</b> <span th:if="${ex}" th:text="${ex.message}">exception
+			...</span> <span th:if="${exception}" th:text="${exception.message}">exception
+			...</span> <span th:if="${message} and ${message.length() != 0}"
+                             th:text="${message}">message ...</span>
+    <blockquote>
+        <i>Note: You would never generate a page that displays a Java
+            exception to an end-user in a real application</i>
+    </blockquote>
+    <b>Cause1:</b> <span th:if="${ex}" th:text="${ex.message}">exception
+                ...</span> <span th:if="${exception}" th:text="${exception.message}">exception
+                ...</span>
+</div>
+
+</body>
+</html>

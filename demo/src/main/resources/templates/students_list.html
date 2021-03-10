@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Student Detail</title>
+</head>
+<body>
+<div th:if="${courseId}">
+        <h2 th:text=" 'Students by Course Id: ' + ${courseId}"> </h2> </div>
+</div>
+<!-- ELSE -->
+<div th:unless="${courseId}">
+<h2>Students: </h2>
+</div>
+<table border="2" style="width:50%">
+    <tr>
+        <th>Lastname</th>
+        <th>Firstname</th>
+        <th>Email</th>
+        <th>StudentId</th>
+    </tr>
+<tr th:each="student: ${students}">
+    <td th:text="${student.firstName}" />
+    <td th:text="${student.lastName}" />
+    <td th:text="${student.email}" />
+    <td th:text="${student.studentId}" />
+</tr>
+</table>
+</body>
+</html>

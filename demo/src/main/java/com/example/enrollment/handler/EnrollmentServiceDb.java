@@ -76,15 +76,14 @@ public class EnrollmentServiceDb {
                 .collect(Collectors.toList());
     }
 
-    public boolean addCourse(Course course) {
-        Course ret = courseRepository.save(course);
-        return ret != null ? true : false;
+    public Course addCourse(Course course) {
+        Course course1 = courseRepository.save(course);
+        return course1;
     }
 
-    public boolean addStudent(Student student) {
-        Student ret = studentRepository.save(student);
-        ;
-        return ret != null ? true : false;
+    public Student addStudent(Student student) {
+        Student student1 = studentRepository.save(student);
+        return student1;
     }
 
     public List<StudentsCoursesMapping> getStudentsCoursesMappings() {

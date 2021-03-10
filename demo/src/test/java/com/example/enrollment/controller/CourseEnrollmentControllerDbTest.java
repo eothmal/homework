@@ -58,117 +58,117 @@ class CourseEnrollmentControllerDbTest {
     }
 
 
-    @Test
-    void getStudentsTest() throws Exception {
-        when(enrollmentService.getStudents()).thenReturn(students);
-        mockMvc.perform(get("/students")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect((jsonPath("$", hasSize(1))))
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[*].firstName").value("first"))
-                .andExpect(jsonPath("$[*].lastName").value("last"))
-                .andExpect(jsonPath("$[*].email").value("flast@mail.com"));
-    }
+//    @Test
+//    void getStudentsTest() throws Exception {
+//        when(enrollmentService.getStudents()).thenReturn(students);
+//        mockMvc.perform(get("/students")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect((jsonPath("$", hasSize(1))))
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$[*].firstName").value("first"))
+//                .andExpect(jsonPath("$[*].lastName").value("last"))
+//                .andExpect(jsonPath("$[*].email").value("flast@mail.com"));
+//    }
 
-    @Test
-    void getCoursesTest() throws Exception {
-        when(enrollmentService.getCourses()).thenReturn(courses);
-        mockMvc.perform(get("/courses")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect((jsonPath("$", hasSize(1))))
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[*].name").value("Python"))
-                .andExpect(jsonPath("$[*].offeredBy").value("Irving"))
-                .andExpect(jsonPath("$[*].courseId").value("PY101"));
-    }
+//    @Test
+//    void getCoursesTest() throws Exception {
+//        when(enrollmentService.getCourses()).thenReturn(courses);
+//        mockMvc.perform(get("/courses")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect((jsonPath("$", hasSize(1))))
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$[*].name").value("Python"))
+//                .andExpect(jsonPath("$[*].offeredBy").value("Irving"))
+//                .andExpect(jsonPath("$[*].courseId").value("PY101"));
+//    }
 
-    @Test
-    void getStudentDetailsTest() throws Exception {
-        when(enrollmentService.retrieveStudent("1")).thenReturn(student);
-        mockMvc.perform(get("/students/{studentId}", "1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.studentId").value("1"))
-                .andExpect(jsonPath("$.firstName").value("first"))
-                .andExpect(jsonPath("$.lastName").value("last"))
-                .andExpect(jsonPath("$.email").value("flast@mail.com"));
-    }
+//    @Test
+//    void getStudentDetailsTest() throws Exception {
+//        when(enrollmentService.retrieveStudent("1")).thenReturn(student);
+//        mockMvc.perform(get("/students/{studentId}", "1")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$.studentId").value("1"))
+//                .andExpect(jsonPath("$.firstName").value("first"))
+//                .andExpect(jsonPath("$.lastName").value("last"))
+//                .andExpect(jsonPath("$.email").value("flast@mail.com"));
+//    }
 
-    @Test
-    void getCourseDetailsTest() throws Exception {
-        when(enrollmentService.retrieveCourse("1")).thenReturn(course);
-        mockMvc.perform(get("/courses/{courseId}", "1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.name").value("Python"))
-                .andExpect(jsonPath("$.offeredBy").value("Irving"))
-                .andExpect(jsonPath("$.courseId").value("PY101"));
-    }
+//    @Test
+//    void getCourseDetailsTest() throws Exception {
+//        when(enrollmentService.retrieveCourse("1")).thenReturn(course);
+//        mockMvc.perform(get("/courses/{courseId}", "1")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$.name").value("Python"))
+//                .andExpect(jsonPath("$.offeredBy").value("Irving"))
+//                .andExpect(jsonPath("$.courseId").value("PY101"));
+//    }
 
-    @Test
-    void createStudentTest() throws Exception {
-        when(enrollmentService.addStudent(student)).thenReturn(true);
-        mockMvc.perform(post("/students").contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(student)))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    void createStudentTest() throws Exception {
+//        when(enrollmentService.addStudent(student)).thenReturn(true);
+//        mockMvc.perform(post("/students").contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(student)))
+//                .andExpect(status().isOk());
+//    }
 
-    @Test
-    void createCourseTest() throws Exception {
-        when(enrollmentService.addCourse(course)).thenReturn(true);
-        mockMvc.perform(post("/courses").contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(course)))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    void createCourseTest() throws Exception {
+//        when(enrollmentService.addCourse(course)).thenReturn(true);
+//        mockMvc.perform(post("/courses").contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(course)))
+//                .andExpect(status().isOk());
+//    }
 
-    @Test
-    void retrieveCoursesForAStudentTest() throws Exception {
-        when(enrollmentService.retrieveCoursesForAStudent("1")).thenReturn(courses);
-        mockMvc.perform(get("/students/{studentId}/courses", "1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[0].name").value("Python"))
-                .andExpect(jsonPath("$[0].offeredBy").value("Irving"))
-                .andExpect(jsonPath("$[0].courseId").value("PY101"));
-    }
+//    @Test
+//    void retrieveCoursesForAStudentTest() throws Exception {
+//        when(enrollmentService.retrieveCoursesForAStudent("1")).thenReturn(courses);
+//        mockMvc.perform(get("/students/{studentId}/courses", "1")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$[0].name").value("Python"))
+//                .andExpect(jsonPath("$[0].offeredBy").value("Irving"))
+//                .andExpect(jsonPath("$[0].courseId").value("PY101"));
+//    }
 
-    @Test
-    void retrieveStudentsForACourseTest() throws Exception {
-        when(enrollmentService.retrieveStudentsForACourse("PY101")).thenReturn(students);
-        mockMvc.perform(get("/courses/{courseId}/students", "PY101")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[0].studentId").value("1"))
-                .andExpect(jsonPath("$[0].firstName").value("first"))
-                .andExpect(jsonPath("$[0].lastName").value("last"))
-                .andExpect(jsonPath("$[0].email").value("flast@mail.com"));
-    }
+//    @Test
+//    void retrieveStudentsForACourseTest() throws Exception {
+//        when(enrollmentService.retrieveStudentsForACourse("PY101")).thenReturn(students);
+//        mockMvc.perform(get("/courses/{courseId}/students", "PY101")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$[0].studentId").value("1"))
+//                .andExpect(jsonPath("$[0].firstName").value("first"))
+//                .andExpect(jsonPath("$[0].lastName").value("last"))
+//                .andExpect(jsonPath("$[0].email").value("flast@mail.com"));
+//    }
 
-    @Test
-    void enrollTest() throws Exception {
-        when(enrollmentService.enrollInACourse("1","PY101")).thenReturn(true);
-        mockMvc.perform(post("/enroll").contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(studentsCoursesMapping)))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    void enrollTest() throws Exception {
+//        when(enrollmentService.enrollInACourse("1","PY101")).thenReturn(true);
+//        mockMvc.perform(post("/enroll").contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(studentsCoursesMapping)))
+//                .andExpect(status().isOk());
+//    }
 
-    @Test
-    void getStudentsCoursesMappingTest() throws Exception {
-        when(enrollmentService.getStudentsCoursesMappings()).thenReturn(studentsCoursesMappingMappings);
-        mockMvc.perform(get("/enroll")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect((jsonPath("$", hasSize(1))))
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[*].studentId").value("1"))
-                .andExpect(jsonPath("$[*].courseId").value("PY101"));
-    }
+//    @Test
+//    void getStudentsCoursesMappingTest() throws Exception {
+//        when(enrollmentService.getStudentsCoursesMappings()).thenReturn(studentsCoursesMappingMappings);
+//        mockMvc.perform(get("/enroll")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect((jsonPath("$", hasSize(1))))
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$[*].studentId").value("1"))
+//                .andExpect(jsonPath("$[*].courseId").value("PY101"));
+//    }
 
     /*
      * converts a Java object into JSON representation

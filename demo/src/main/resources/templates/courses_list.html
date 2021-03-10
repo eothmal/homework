@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses </title>
+    <style>
+div {
+  display: block;
+   border: 2px outset blue;
+  background-color: lightblue;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<div th:if="${studentId}">
+    <h1 th:text=" 'Courses by Student Id: ' + ${studentId}"></h1>
+</div>
+<!-- ELSE -->
+<div th:unless="${studentId}">
+<h1>Courses: </h1>
+</div>
+<div>
+<table border="2" style="width:75%">
+    <tr>
+        <th>Course Name</th>
+        <th>Offered By</th>
+        <th>Course Id</th>
+    </tr>
+<tr th:each="course: ${courses}">
+    <td th:text="${course.name}" />
+    <td th:text="${course.offeredBy}" />
+    <td th:text="${course.courseId}" />
+</tr>
+</table>
+</div>
+</body>
+</html>

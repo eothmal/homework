@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Title</title>
+</head>
+<body>
+<div class="headDiv">
+<h1>Enrollment </h1>
+</div>
+<div class="itemDiv">
+<h2>9. List of Enrollment</h2>
+</div>
+<form action="/web/enroll" method="get" >
+    <p> <input type="submit" value="List of Enroll"> </p>
+</form>
+<div class="itemDiv">
+<h2>10. Add Enrollment</h2>
+</div>
+<form action="/web/enroll" method="post" th:Object="${studentsCoursesMapping}">
+    <p>Student Id: <input type="text" th:field="${studentsCoursesMapping.studentId}" /> </p>
+    <p>Course Id: <input type="text" th:field="${studentsCoursesMapping.courseId}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="reset"></p>
+</form>
+</body>
+</html>
