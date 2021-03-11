@@ -1,0 +1,6942 @@
+cscope 15 $HOME/course/homework               0000036162
+	@demo/src/main/java/com/example/enrollment/CourseEnrollmentApplication.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	gS´šgAµliÿtiÚ
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	gautocÚfigu»
+.
+	gS´šgBoÙAµliÿtiÚ
+;
+
+6 @
+S´šgBoÙAµliÿtiÚ
+
+
+7 
+public
+ cÏs 
+	cCour£EÄŞlm’tAµliÿtiÚ
+ {
+
+9 
+public
+ 
+	$maš
+(
+SŒšg
+[] 
+¬gs
+) {
+
+10 
+S´šgAµliÿtiÚ
+.
+	`run
+(
+Cour£EÄŞlm’tAµliÿtiÚ
+.
+şass
+, 
+¬gs
+);
+
+13 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/controller/BaseController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gEÄŞlm’tS”viûDb
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gui
+.
+	gMod–
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.*;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gmvc
+.
+	gsuµÜt
+.
+	gRedœeùA‰ribu‹s
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+17 @
+	gCÚŒŞËr
+
+
+18 @
+Reque¡M­pšg
+("/base")
+
+19 
+public
+ cÏs 
+	cBa£CÚŒŞËr
+ {
+
+21 @
+Autowœed
+
+
+22 
+´iv©e
+ 
+EÄŞlm’tS”viûDb
+ 
+	m’rŞlm’tS”viû
+;
+
+24 @
+Reque¡M­pšg
+("/all")
+
+25 
+public
+ 
+SŒšg
+ 
+	$g‘Index
+(
+Mod–
+ 
+mod–
+){
+
+26 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tD©a", 
+Ãw
+ 
+	`Stud’t
+());
+
+27 
+mod–
+.
+	`addA‰ribu‹
+("cour£D©a", 
+Ãw
+ 
+	`Cour£
+());
+
+28 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tsCour£sM­pšg", 
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+());
+
+32 @
+	`Reque¡M­pšg
+("/student")
+
+33 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’tHome
+(
+Mod–
+ 
+mod–
+){
+
+34 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tD©a", 
+Ãw
+ 
+	`Stud’t
+());
+
+36 
+	}
+}
+
+38 @
+Reque¡M­pšg
+("/course")
+
+39 
+public
+ 
+SŒšg
+ 
+	$g‘Cour£Home
+(
+Mod–
+ 
+mod–
+){
+
+40 
+mod–
+.
+	`addA‰ribu‹
+("cour£D©a", 
+Ãw
+ 
+	`Cour£
+());
+
+42 
+	}
+}
+
+44 @
+Reque¡M­pšg
+("/enroll")
+
+45 
+public
+ 
+SŒšg
+ 
+	$g‘EÄŞlHome
+(
+Mod–
+ 
+mod–
+){
+
+46 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tsCour£sM­pšg", 
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+());
+
+48 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/controller/CourseEnrollmentController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gEÄŞlm’tS”viû
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+.
+	gCour£
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+.
+	gStud’t
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.*;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+13 @
+	gRe¡CÚŒŞËr
+
+
+14 @
+Reque¡M­pšg
+("/pre")
+
+15 
+public
+ cÏs 
+	cCour£EÄŞlm’tCÚŒŞËr
+ {
+
+17 @
+Autowœed
+ 
+´iv©e
+ 
+EÄŞlm’tS”viû
+ 
+	m’rŞlm’tS”viû
+;
+
+19 @
+G‘M­pšg
+("/students")
+
+20 
+public
+ 
+	mLi¡
+<
+	mStud’t
+> 
+	$g‘Stud’ts
+() {
+
+21  
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+();
+
+24 @
+	`G‘M­pšg
+("/courses")
+
+25 
+public
+ 
+Li¡
+<
+Cour£
+> 
+	$g‘Cour£s
+() {
+
+26  
+’rŞlm’tS”viû
+.
+	`g‘Cour£s
+();
+
+27 
+	}
+}
+
+29 @
+G‘M­pšg
+("/students/{studentId}")
+
+30 
+public
+ 
+Stud’t
+ 
+g‘Stud’tD‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+¡ud’tId
+) {
+
+31  
+	g’rŞlm’tS”viû
+.
+»Œ›veStud’t
+(
+¡ud’tId
+);
+
+34 @
+G‘M­pšg
+("/courses/{courseId}")
+
+35 
+public
+ 
+Cour£
+ 
+g‘Cour£D‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+cour£Id
+) {
+
+36  
+	g’rŞlm’tS”viû
+.
+»Œ›veCour£
+(
+cour£Id
+);
+
+39 @
+Po¡M­pšg
+("/students")
+
+40 
+public
+ 
+SŒšg
+ 
+ü—‹Stud’t
+(@
+Reque¡Body
+ 
+Stud’t
+ 
+¡ud’t
+) {
+
+41 
+	g’rŞlm’tS”viû
+.
+addStud’t
+(
+¡ud’t
+);
+
+45 @
+Po¡M­pšg
+("/courses")
+
+46 
+public
+ 
+SŒšg
+ 
+ü—‹Cour£
+(@
+Reque¡Body
+ 
+Cour£
+ 
+cour£
+) {
+
+47 
+	g’rŞlm’tS”viû
+.
+addCour£
+(
+cour£
+);
+
+51 @
+G‘M­pšg
+("/students/{studentId}/courses")
+
+52 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+»Œ›veCour£sFÜAStud’t
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+¡ud’tId
+)
+
+54  
+	g’rŞlm’tS”viû
+.
+»Œ›veCour£sFÜAStud’t
+(
+¡ud’tId
+);
+
+57 @
+G‘M­pšg
+("/courses/{courseId}/students")
+
+58 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+»Œ›veStud’tsFÜACour£
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+cour£Id
+)
+
+60  
+	g’rŞlm’tS”viû
+.
+»Œ›veStud’tsFÜACour£
+(
+cour£Id
+);
+
+62 @
+Po¡M­pšg
+("/enroll")
+
+63 
+public
+ 
+SŒšg
+ 
+’rŞl
+(@
+Reque¡Body
+ 
+M­
+<SŒšg, SŒšg> 
+jsÚ
+) {
+
+64 
+SŒšg
+ 
+	g¡ud’tId
+ = 
+jsÚ
+.
+g‘
+("studentId");
+
+65 
+SŒšg
+ 
+	gcour£Id
+ = 
+jsÚ
+.
+g‘
+("courseId");
+
+66 
+boŞ—n
+ 
+	g»t
+ = 
+’rŞlm’tS”viû
+.
+’rŞlInACour£
+(
+¡ud’tId
+, 
+cour£Id
+);
+
+67  
+	g»t
+ ? "Success": "Failure";
+
+69 @
+G‘M­pšg
+("/enroll")
+
+70 
+public
+ 
+	gLi¡
+<
+	gStud’tsCour£sM­pšg
+> 
+	$g‘Stud’tsCour£sM­pšg
+() {
+
+71  
+’rŞlm’tS”viû
+.
+	`g‘Stud’tsCour£sM­pšgs
+();
+
+72 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/controller/CourseEnrollmentControllerDb.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gM­V®id©iÚE¼ÜS”viû
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gEÄŞlm’tS”viûDb
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pStus
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gv®id©iÚ
+.
+	gBšdšgResuÉ
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.*;
+
+14 
+impÜt
+ 
+	gjavax
+.
+	gv®id©iÚ
+.
+	gV®id
+;
+
+15 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+18 @
+	gRe¡CÚŒŞËr
+
+
+19 @
+CrossOrigš
+
+
+20 
+public
+ cÏs 
+	cCour£EÄŞlm’tCÚŒŞËrDb
+ {
+
+22 @
+Autowœed
+
+
+23 
+´iv©e
+ 
+EÄŞlm’tS”viûDb
+ 
+	m’rŞlm’tS”viû
+;
+
+24 @
+Autowœed
+
+
+25 
+´iv©e
+ 
+M­V®id©iÚE¼ÜS”viû
+ 
+	mm­V®id©iÚE¼ÜS”viû
+;
+
+27 @
+G‘M­pšg
+("/students")
+
+28 
+public
+ 
+	mLi¡
+<
+	mStud’t
+> 
+	$g‘Stud’ts
+() {
+
+29  
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+();
+
+32 @
+	`G‘M­pšg
+("/courses")
+
+33 
+public
+ 
+Li¡
+<
+Cour£
+> 
+	$g‘Cour£s
+() {
+
+34  
+’rŞlm’tS”viû
+.
+	`g‘Cour£s
+();
+
+35 
+	}
+}
+
+37 @
+G‘M­pšg
+("/students/{studentId}")
+
+38 
+public
+ 
+Stud’t
+ 
+g‘Stud’tD‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+¡ud’tId
+) {
+
+39  
+	g’rŞlm’tS”viû
+.
+»Œ›veStud’t
+(
+¡ud’tId
+);
+
+42 @
+G‘M­pšg
+("/courses/{courseId}")
+
+43 
+public
+ 
+Cour£
+ 
+g‘Cour£D‘as
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+cour£Id
+) {
+
+44  
+	g’rŞlm’tS”viû
+.
+»Œ›veCour£
+(
+cour£Id
+);
+
+47 @
+Po¡M­pšg
+("/students")
+
+48 
+public
+ 
+SŒšg
+ 
+ü—‹Stud’t
+(@
+Reque¡Body
+ 
+Stud’t
+ 
+¡ud’t
+) {
+
+49 
+Stud’t
+ 
+	g¡ud’t1
+ = 
+’rŞlm’tS”viû
+.
+addStud’t
+(
+¡ud’t
+);
+
+50  (
+	g¡ud’t1
+ !ğ
+nuÎ
+) ? "Success" : "Failure";
+
+53 @
+Po¡M­pšg
+("/courses")
+
+54 
+public
+ 
+	gRe¥Ú£EÁ™y
+<?> 
+ü—‹Cour£
+(@
+V®id
+ @
+Reque¡Body
+ 
+Cour£
+ 
+cour£
+, 
+BšdšgResuÉ
+ 
+»suÉ
+) {
+
+55 
+	gRe¥Ú£EÁ™y
+<?> 
+	g”rÜM­
+ = 
+m­V®id©iÚE¼ÜS”viû
+.
+M­V®id©iÚS”viû
+(
+»suÉ
+);
+
+56 ià(
+	g”rÜM­
+ !ğ
+nuÎ
+è 
+”rÜM­
+;
+
+58 
+Cour£
+ 
+	gcour£1
+ = 
+’rŞlm’tS”viû
+.
+addCour£
+(
+cour£
+);
+
+59  
+Ãw
+ 
+	gRe¥Ú£EÁ™y
+<
+	gCour£
+>(
+	gcour£1
+, 
+	gH‰pStus
+.
+	gCREATED
+);
+
+62 @
+G‘M­pšg
+("/students/{studentId}/courses")
+
+63 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+»Œ›veCour£sFÜAStud’t
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+¡ud’tId
+) {
+
+64  
+	g’rŞlm’tS”viû
+.
+»Œ›veCour£sFÜAStud’t
+(
+¡ud’tId
+);
+
+67 @
+G‘M­pšg
+("/courses/{courseId}/students")
+
+68 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+»Œ›veStud’tsFÜACour£
+(@
+P©hV¬ŸbË
+ 
+SŒšg
+ 
+cour£Id
+) {
+
+69  
+	g’rŞlm’tS”viû
+.
+»Œ›veStud’tsFÜACour£
+(
+cour£Id
+);
+
+72 @
+Po¡M­pšg
+("/enroll")
+
+73 
+public
+ 
+SŒšg
+ 
+’rŞl
+(@
+Reque¡Body
+ 
+M­
+<SŒšg, SŒšg> 
+jsÚ
+) {
+
+74 
+SŒšg
+ 
+	g¡ud’tId
+ = 
+jsÚ
+.
+g‘
+("studentId");
+
+75 
+SŒšg
+ 
+	gcour£Id
+ = 
+jsÚ
+.
+g‘
+("courseId");
+
+76 
+boŞ—n
+ 
+	g»t
+ = 
+’rŞlm’tS”viû
+.
+’rŞlInACour£
+(
+¡ud’tId
+, 
+cour£Id
+);
+
+77  
+	g»t
+ ? "Success" : "Failure";
+
+80 @
+G‘M­pšg
+("/enroll")
+
+81 
+public
+ 
+	gLi¡
+<
+	gStud’tsCour£sM­pšg
+> 
+	$g‘Stud’tsCour£sM­pšg
+() {
+
+82  
+’rŞlm’tS”viû
+.
+	`g‘Stud’tsCour£sM­pšgs
+();
+
+83 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/controller/HomeController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gui
+.
+	gMod–
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gReque¡M­pšg
+;
+
+10 @
+CÚŒŞËr
+
+
+11 
+public
+ cÏs 
+	cHomeCÚŒŞËr
+ {
+
+13 @
+Reque¡M­pšg
+(
+Çme
+ = "/")
+
+14 
+public
+ 
+SŒšg
+ 
+	$g‘Home
+(
+Mod–
+ 
+mod–
+){
+
+18 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/controller/WebController.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gEÄŞlm’tS”viûDb
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gM­V®id©iÚE¼ÜS”viû
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCÚŒŞËr
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gui
+.
+	gMod–
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gv®id©iÚ
+.
+	gBšdšgResuÉ
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.*;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gcÚfig
+.
+	gªnÙ©iÚ
+.
+	gV›wCÚŒŞËrRegi¡ry
+;
+
+15 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gcÚfig
+.
+	gªnÙ©iÚ
+.
+	gWebMvcCÚfigu»r
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	g£rvËt
+.
+	gmvc
+.
+	gsuµÜt
+.
+	gRedœeùA‰ribu‹s
+;
+
+18 
+impÜt
+ 
+	gjavax
+.
+	gv®id©iÚ
+.
+	gV®id
+;
+
+19 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+21 @
+	gCÚŒŞËr
+
+
+22 @
+Reque¡M­pšg
+("/web")
+
+23 
+public
+ cÏs 
+	cWebCÚŒŞËr
+ 
+im¶em’ts
+ 
+	mWebMvcCÚfigu»r
+{
+
+25 @
+Autowœed
+
+
+26 
+´iv©e
+ 
+EÄŞlm’tS”viûDb
+ 
+	m’rŞlm’tS”viû
+;
+
+27 @
+Autowœed
+
+
+28 
+´iv©e
+ 
+M­V®id©iÚE¼ÜS”viû
+ 
+	mm­V®id©iÚE¼ÜS”viû
+;
+
+31 @
+Reque¡M­pšg
+("/start")
+
+32 
+public
+ 
+SŒšg
+ 
+	$g‘S¹
+(
+Mod–
+ 
+mod–
+){
+
+33 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tD©a", 
+Ãw
+ 
+	`Stud’t
+());
+
+34 
+mod–
+.
+	`addA‰ribu‹
+("cour£D©a", 
+Ãw
+ 
+	`Cour£
+());
+
+35 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tsCour£sM­pšg", 
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+());
+
+39 @
+	`Reque¡M­pšg
+("/students")
+
+40 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’ts
+(
+Mod–
+ 
+mod–
+){
+
+41 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+ = 
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+();
+
+42 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’ts", 
+¡ud’ts
+);
+
+44 
+	}
+}
+
+46 @
+Reque¡M­pšg
+("/courses")
+
+47 
+public
+ 
+SŒšg
+ 
+	$g‘Cour£s
+(
+Mod–
+ 
+mod–
+){
+
+48 
+Li¡
+<
+Cour£
+> 
+cour£s
+ = 
+’rŞlm’tS”viû
+.
+	`g‘Cour£s
+();
+
+49 
+mod–
+.
+	`addA‰ribu‹
+("cour£s", 
+cour£s
+);
+
+51 
+	}
+}
+
+53 @
+Reque¡M­pšg
+(
+v®ue
+ = "/¡ud’ts", 
+m‘hod
+ = 
+Reque¡M‘hod
+.
+POST
+)
+
+55 
+public
+ 
+SŒšg
+ 
+ü—‹Stud’t
+(@
+V®id
+ 
+Stud’t
+ 
+¡ud’t
+, 
+BšdšgResuÉ
+ 
+»suÉ
+) {
+
+56 ià(
+	g»suÉ
+.
+hasE¼Üs
+()) {
+
+60 
+Stud’t
+ 
+	g¡ud’t1
+ = 
+’rŞlm’tS”viû
+.
+addStud’t
+(
+¡ud’t
+);
+
+65 @
+Reque¡M­pšg
+(
+v®ue
+ = "/cour£s", 
+m‘hod
+ = 
+Reque¡M‘hod
+.
+POST
+)
+
+67 
+public
+ 
+SŒšg
+ 
+ü—‹Cour£
+(@
+V®id
+ 
+Cour£
+ 
+cour£
+, 
+BšdšgResuÉ
+ 
+»suÉ
+) {
+
+72 ià(
+	g»suÉ
+.
+hasE¼Üs
+()) {
+
+77 
+Cour£
+ 
+	gcour£1
+ = 
+’rŞlm’tS”viû
+.
+addCour£
+(
+cour£
+);
+
+84 @
+Reque¡M­pšg
+("/students/{studentId}")
+
+85 
+public
+ 
+SŒšg
+ 
+g‘Stud’tD‘as
+(@
+P©hV¬ŸbË
+ SŒšg 
+¡ud’tId
+, 
+RedœeùA‰ribu‹s
+ 
+©Œ
+){
+
+86 
+Stud’t
+ 
+	g¡ud’t
+ = 
+’rŞlm’tS”viû
+.
+»Œ›veStud’t
+(
+¡ud’tId
+);
+
+87 
+	g©Œ
+.
+addFÏshA‰ribu‹
+("¡ud’t", 
+¡ud’t
+);
+
+91 @
+Reque¡M­pšg
+("/student/display")
+
+92 
+public
+ 
+SŒšg
+ 
+	$¡ud’tDi¥Ïy
+(
+Stud’t
+ 
+¡ud’t
+){
+
+94 
+	}
+}
+
+96 @
+Reque¡M­pšg
+("/courses/{courseId}")
+
+97 
+public
+ 
+SŒšg
+ 
+g‘Cour£D‘as
+(@
+P©hV¬ŸbË
+ SŒšg 
+cour£Id
+, 
+RedœeùA‰ribu‹s
+ 
+©Œ
+){
+
+98 
+Cour£
+ 
+	gcour£
+ = 
+’rŞlm’tS”viû
+.
+»Œ›veCour£
+(
+cour£Id
+);
+
+99 
+	g©Œ
+.
+addFÏshA‰ribu‹
+("cour£", 
+cour£
+);
+
+103 @
+Reque¡M­pšg
+("/course/display")
+
+104 
+public
+ 
+SŒšg
+ 
+	$cour£Di¥Ïy
+(
+Cour£
+ 
+cour£
+){
+
+106 
+	}
+}
+
+110 @
+Reque¡M­pšg
+("/students/courses/{studentId}")
+
+111 
+public
+ 
+SŒšg
+ 
+»Œ›veCour£sFÜAStud’t
+(@
+P©hV¬ŸbË
+ SŒšg 
+¡ud’tId
+, 
+Mod–
+ 
+mod–
+)
+
+113 
+	gLi¡
+<
+	gCour£
+> 
+	gcour£s
+ = 
+’rŞlm’tS”viû
+.
+»Œ›veCour£sFÜAStud’t
+(
+¡ud’tId
+);
+
+114 
+	gmod–
+.
+addA‰ribu‹
+("cour£s", 
+cour£s
+);
+
+115 
+	gmod–
+.
+addA‰ribu‹
+("¡ud’tId", 
+¡ud’tId
+);
+
+120 @
+G‘M­pšg
+("/courses/students/{courseId}")
+
+121 
+public
+ 
+SŒšg
+ 
+»Œ›veStud’tsFÜACour£
+(@
+P©hV¬ŸbË
+ SŒšg 
+cour£Id
+, 
+Mod–
+ 
+mod–
+)
+
+123 
+	gLi¡
+<
+	gStud’t
+> 
+	g¡ud’ts
+ = 
+’rŞlm’tS”viû
+.
+»Œ›veStud’tsFÜACour£
+(
+cour£Id
+);
+
+124 
+	gmod–
+.
+addA‰ribu‹
+("¡ud’ts", 
+¡ud’ts
+);
+
+125 
+	gmod–
+.
+addA‰ribu‹
+("cour£Id", 
+cour£Id
+);
+
+129 @
+Po¡M­pšg
+("/enroll")
+
+130 
+public
+ 
+SŒšg
+ 
+	$’rŞl
+(
+Stud’tsCour£sM­pšg
+ 
+¡ud’tsCour£sM­pšg
+, 
+Mod–
+ 
+mod–
+) {
+
+131 
+boŞ—n
+ 
+»t
+ = 
+’rŞlm’tS”viû
+.
+	`’rŞlInACour£
+(
+¡ud’tsCour£sM­pšg
+.
+	`g‘Stud’tId
+(), stud’tsCour£sM­pšg.
+	`g‘Cour£Id
+());
+
+132 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tsCour£sM­pšg", 
+¡ud’tsCour£sM­pšg
+);
+
+133  
+»t
+ ? "enroll_success": "Failure";
+
+134 
+	}
+}
+
+136 @
+G‘M­pšg
+("/enroll")
+
+137 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’tsCour£sM­pšg
+(
+Mod–
+ 
+mod–
+) {
+
+138 
+Li¡
+<
+Stud’tsCour£sM­pšg
+> 
+¡ud’tsCour£sM­pšgs
+ = 
+’rŞlm’tS”viû
+.
+	`g‘Stud’tsCour£sM­pšgs
+();
+
+139 
+mod–
+.
+	`addA‰ribu‹
+("¡ud’tsCour£sM­pšgs",
+¡ud’tsCour£sM­pšgs
+ );
+
+141 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/dao/CourseRepository.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gd©a
+.
+	g»pos™Üy
+.
+	gCrudR•os™Üy
+;
+
+6 
+public
+ 
+š‹rçû
+ 
+Cour£R•os™Üy
+ 
+ex‹nds
+ 
+	gCrudR•os™Üy
+<
+	gCour£
+, 
+	gSŒšg
+> {
+
+	@demo/src/main/java/com/example/enrollment/dao/StudentRepository.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+;
+
+3 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gd©a
+.
+	g»pos™Üy
+.
+	gCrudR•os™Üy
+;
+
+8 
+public
+ 
+š‹rçû
+ 
+Stud’tR•os™Üy
+ 
+ex‹nds
+ 
+	gCrudR•os™Üy
+<
+	gStud’t
+, 
+	gSŒšg
+> {
+
+	@demo/src/main/java/com/example/enrollment/domain/Course.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gç¡”xml
+.
+	gjacksÚ
+.
+	gªnÙ©iÚ
+.
+	gJsÚIgnÜePrİ”t›s
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gÏng
+.
+	gNÚNuÎ
+;
+
+6 
+impÜt
+ 
+	gjavax
+.
+	g³rsi¡’û
+.*;
+
+7 
+impÜt
+ 
+	gjavax
+.
+	gv®id©iÚ
+.
+	gcÚ¡¿šts
+.
+	gNÙBÏnk
+;
+
+8 
+impÜt
+ 
+	gjavax
+.
+	gv®id©iÚ
+.
+	gcÚ¡¿šts
+.
+	gSize
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+11 @
+	gEÁ™y
+
+
+12 @
+JsÚIgnÜePrİ”t›s
+({"students"})
+
+13 
+public
+ cÏs 
+	cCour£
+ {
+
+14 @
+NÙBÏnk
+(
+mes§ge
+ = "Course‚ame is„equired")
+
+15 
+´iv©e
+ 
+SŒšg
+ 
+Çme
+;
+
+16 @
+NÙBÏnk
+(
+mes§ge
+ = "Course OfferBy is„equired")
+
+17 
+´iv©e
+ 
+SŒšg
+ 
+ofã»dBy
+;
+
+18 @
+	mId
+
+
+19 @
+	mNÚNuÎ
+
+
+20 @
+	$Size
+(
+mš
+=6,
+max
+ = 6)
+
+21 
+´iv©e
+ 
+SŒšg
+ 
+cour£Id
+;
+
+23 
+public
+ 
+	$Cour£
+() {
+
+26 @
+	`MªyToMªy
+(
+ÿsÿde
+ = {
+CasÿdeTy³
+.
+DETACH
+, CasÿdeTy³.
+MERGE
+, CasÿdeTy³.
+REFRESH
+, CasÿdeTy³.
+PERSIST
+},
+
+27 
+	gãtch
+ = 
+F‘chTy³
+.
+LAZY
+)
+
+28 @
+JošTabË
+(
+Çme
+ = "students_courses" ,
+
+29 
+jošCŞumns
+ = @
+JošCŞumn
+(
+Çme
+ = "course_id"),
+
+30 
+šv”£JošCŞumns
+ = @
+JošCŞumn
+(
+Çme
+ = "student_id"))
+
+31 
+´iv©e
+ 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+;
+
+33 
+public
+ 
+	$Cour£
+(
+SŒšg
+ 
+Çme
+, SŒšg 
+ofã»dBy
+, SŒšg 
+cour£Id
+) {
+
+34 
+	`su³r
+();
+
+35 
+this
+.
+Çme
+ =‚ame;
+
+36 
+this
+.
+ofã»dBy
+ = offeredBy;
+
+37 
+this
+.
+cour£Id
+ = courseId;
+
+38 
+	}
+}
+
+40 
+public
+ 
+SŒšg
+ 
+	$g‘Name
+() {
+
+41  
+Çme
+;
+
+42 
+	}
+}
+
+44 
+public
+ 
+SŒšg
+ 
+	$g‘Ofã»dBy
+() {
+
+45  
+ofã»dBy
+;
+
+46 
+	}
+}
+
+48 
+public
+ 
+SŒšg
+ 
+	$g‘Cour£Id
+() {
+
+49  
+cour£Id
+;
+
+50 
+	}
+}
+
+52 
+public
+ 
+	$£tName
+(
+SŒšg
+ 
+Çme
+) {
+
+53 
+this
+.
+Çme
+ =‚ame;
+
+54 
+	}
+}
+
+56 
+public
+ 
+	$£tOfã»dBy
+(
+SŒšg
+ 
+ofã»dBy
+) {
+
+57 
+this
+.
+ofã»dBy
+ = offeredBy;
+
+58 
+	}
+}
+
+60 
+public
+ 
+	$£tCour£Id
+(
+SŒšg
+ 
+cour£Id
+) {
+
+61 
+this
+.
+cour£Id
+ = courseId;
+
+62 
+	}
+}
+
+64 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+	$g‘Stud’ts
+() {
+
+65  
+¡ud’ts
+;
+
+66 
+	}
+}
+
+68 
+public
+ 
+£tStud’ts
+(
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+) {
+
+69 
+	gthis
+.
+	g¡ud’ts
+ = 
+¡ud’ts
+;
+
+	@demo/src/main/java/com/example/enrollment/domain/Student.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gç¡”xml
+.
+	gjacksÚ
+.
+	gªnÙ©iÚ
+.
+	gJsÚIgnÜePrİ”t›s
+;
+
+5 
+impÜt
+ 
+	gjavax
+.
+	g³rsi¡’û
+.*;
+
+6 
+impÜt
+ 
+	gjavax
+.
+	gv®id©iÚ
+.
+	gcÚ¡¿šts
+.
+	gNÙBÏnk
+;
+
+7 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+9 @
+	gEÁ™y
+
+
+10 @
+JsÚIgnÜePrİ”t›s
+({"courses" })
+
+11 
+public
+ cÏs 
+	cStud’t
+ {
+
+12 @
+NÙBÏnk
+
+
+13 
+´iv©e
+ 
+SŒšg
+ 
+	mfœ¡Name
+;
+
+14 @
+NÙBÏnk
+
+
+15 
+´iv©e
+ 
+SŒšg
+ 
+	mÏ¡Name
+;
+
+16 @
+NÙBÏnk
+
+
+17 
+´iv©e
+ 
+SŒšg
+ 
+	mema
+;
+
+18 @
+	mId
+
+
+19 @
+	$G’”©edV®ue
+(
+¡¿‹gy
+ = 
+G’”©iÚTy³
+.
+IDENTITY
+)
+
+20 
+´iv©e
+ 
+SŒšg
+ 
+¡ud’tId
+;
+
+22 
+public
+ 
+	$Stud’t
+() {
+
+25 
+public
+ 
+	$Stud’t
+(
+SŒšg
+ 
+fœ¡Name
+, SŒšg 
+Ï¡Name
+, SŒšg 
+ema
+, SŒšg 
+¡ud’tId
+) {
+
+26 
+this
+.
+fœ¡Name
+ = firstName;
+
+27 
+this
+.
+Ï¡Name
+ =†astName;
+
+28 
+this
+.
+ema
+ =ƒmail;
+
+29 
+this
+.
+¡ud’tId
+ = studentId;
+
+30 
+	}
+}
+
+32 @
+MªyToMªy
+(
+ÿsÿde
+ = {
+CasÿdeTy³
+.
+DETACH
+, CasÿdeTy³.
+MERGE
+, CasÿdeTy³.
+REFRESH
+, CasÿdeTy³.
+PERSIST
+},
+
+33 
+ãtch
+ = 
+F‘chTy³
+.
+LAZY
+)
+
+34 @
+JošTabË
+(
+Çme
+ = "students_courses" ,
+
+35 
+jošCŞumns
+ = @
+JošCŞumn
+(
+Çme
+ = "student_id"),
+
+36 
+šv”£JošCŞumns
+ = @
+JošCŞumn
+(
+Çme
+ = "course_id"))
+
+37 
+´iv©e
+ 
+Li¡
+<
+Cour£
+> 
+cour£s
+;
+
+39 
+public
+ 
+SŒšg
+ 
+	$g‘Fœ¡Name
+() {
+
+40  
+fœ¡Name
+;
+
+41 
+	}
+}
+
+43 
+public
+ 
+SŒšg
+ 
+	$g‘La¡Name
+() {
+
+44  
+Ï¡Name
+;
+
+45 
+	}
+}
+
+47 
+public
+ 
+SŒšg
+ 
+	$g‘Ema
+() {
+
+48  
+ema
+;
+
+49 
+	}
+}
+
+51 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’tId
+() {
+
+52  
+¡ud’tId
+;
+
+53 
+	}
+}
+
+55 
+public
+ 
+	$£tFœ¡Name
+(
+SŒšg
+ 
+fœ¡Name
+) {
+
+56 
+this
+.
+fœ¡Name
+ = firstName;
+
+57 
+	}
+}
+
+59 
+public
+ 
+	$£tLa¡Name
+(
+SŒšg
+ 
+Ï¡Name
+) {
+
+60 
+this
+.
+Ï¡Name
+ =†astName;
+
+61 
+	}
+}
+
+63 
+public
+ 
+	$£tEma
+(
+SŒšg
+ 
+ema
+) {
+
+64 
+this
+.
+ema
+ =ƒmail;
+
+65 
+	}
+}
+
+67 
+public
+ 
+	$£tStud’tId
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+68 
+this
+.
+¡ud’tId
+ = studentId;
+
+69 
+	}
+}
+
+71 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+	$g‘Cour£s
+() {
+
+72  
+cour£s
+;
+
+73 
+	}
+}
+
+75 
+public
+ 
+£tCour£s
+(
+Li¡
+<
+Cour£
+> 
+cour£s
+) {
+
+76 
+	gthis
+.
+	gcour£s
+ = 
+cour£s
+;
+
+	@demo/src/main/java/com/example/enrollment/handler/EnrollmentService.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gcÚ‹xt
+.
+	gªnÙ©iÚ
+.
+	gB—n
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCompÚ’t
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gweb
+.
+	gbšd
+.
+	gªnÙ©iÚ
+.
+	gP©hV¬ŸbË
+;
+
+9 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+12 @
+CompÚ’t
+
+
+13 
+public
+ cÏs 
+	cEÄŞlm’tS”viû
+ {
+
+14 
+´iv©e
+ 
+	mLi¡
+<
+	mStud’t
+> 
+	m¡ud’ts
+ = 
+Ãw
+ 
+A¼ayLi¡
+<> ();
+
+15 
+´iv©e
+ 
+	mLi¡
+<
+	mCour£
+> 
+	mcour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+16 
+´iv©e
+ 
+	mLi¡
+<
+	mStud’tsCour£sM­pšg
+> 
+	m¡ud’tsCour£sM­pšgs
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+18 
+	m¡ud’ts
+.
+add
+(
+Ãw
+ 
+Stud’t
+("Ikhlas","Alhamd","iklm.ahmed@outmail.com","1"));
+
+19 
+	m¡ud’ts
+.
+add
+(
+Ãw
+ 
+Stud’t
+("Mohammed","Toha","mtoha1000@outmail.com","2"));
+
+20 
+	m¡ud’ts
+.
+add
+(
+Ãw
+ 
+Stud’t
+("Anees", "Belum","roshhold@outmail.com","3"));
+
+21 
+	m¡ud’ts
+.
+add
+(
+Ãw
+ 
+Stud’t
+("Herman", "Mutar","hmutar@outmail.com","4"));
+
+23 
+	mcour£s
+.
+add
+(
+Ãw
+ 
+Cour£
+("Java Spring boot", "Rahman","JSB102"));
+
+24 
+	mcour£s
+.
+add
+(
+Ãw
+ 
+Cour£
+("Amazon Web Service","EPIC","AWS101"));
+
+25 
+	mcour£s
+.
+add
+(
+Ãw
+ 
+Cour£
+("Angular Programming","Plano","ANG101"));
+
+27 
+	m¡ud’tsCour£sM­pšgs
+.
+add
+(
+Ãw
+ 
+Stud’tsCour£sM­pšg
+("1","JSB102"));
+
+28 
+	m¡ud’tsCour£sM­pšgs
+.
+add
+(
+Ãw
+ 
+Stud’tsCour£sM­pšg
+("4","JSB102"));
+
+29 
+	m¡ud’tsCour£sM­pšgs
+.
+add
+(
+Ãw
+ 
+Stud’tsCour£sM­pšg
+("4","ANG101"));
+
+32 
+public
+ 
+Stud’t
+ 
+	$»Œ›veStud’t
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+33 
+Stud’t
+ 
+¡ud’t
+ : 
+¡ud’ts
+) {
+
+34 ià(
+¡ud’t
+.
+	`g‘Stud’tId
+().
+	`equ®s
+(
+¡ud’tId
+)) {
+
+35  
+¡ud’t
+;
+
+38  
+nuÎ
+;
+
+39 
+	}
+}
+
+41 
+public
+ 
+Cour£
+ 
+	$»Œ›veCour£
+(
+SŒšg
+ 
+cour£Id
+) {
+
+42 
+Cour£
+ 
+cour£
+ : 
+cour£s
+) {
+
+43 ià(
+cour£
+.
+	`g‘Cour£Id
+().
+	`equ®s
+(
+cour£Id
+)) {
+
+44  
+cour£
+;
+
+47  
+nuÎ
+;
+
+48 
+	}
+}
+
+50 
+public
+ 
+boŞ—n
+ 
+	$’rŞlInACour£
+(
+SŒšg
+ 
+¡ud’tId
+, SŒšg 
+cour£Id
+) {
+
+51 
+boŞ—n
+ 
+»t
+ = 
+çl£
+;
+
+52 
+Cour£
+ 
+cour£
+ = 
+	`»Œ›veCour£
+(
+cour£Id
+);
+
+53 ià(
+cour£
+ !ğ
+nuÎ
+)
+
+55 
+Stud’t
+ 
+¡ud’t
+ = 
+	`»Œ›veStud’t
+(
+¡ud’tId
+);
+
+56 ià(
+¡ud’t
+ !ğ
+nuÎ
+) {
+
+57 
+¡ud’tsCour£sM­pšgs
+.
+	`add
+(
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+(
+¡ud’tId
+,
+cour£Id
+));
+
+58 
+»t
+ = 
+Œue
+;
+
+61  
+»t
+;
+
+62 
+	}
+}
+
+64 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+	$»Œ›veCour£sFÜAStud’t
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+65 
+Stud’t
+ 
+¡ud’t
+ = 
+	`»Œ›veStud’t
+(
+¡ud’tId
+);
+
+66 
+Li¡
+<
+Cour£
+> 
+li¡
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+67 ià(
+¡ud’t
+ !ğ
+nuÎ
+) {
+
+68 
+Stud’tsCour£sM­pšg
+ 
+obj
+ : 
+¡ud’tsCour£sM­pšgs
+)
+
+69 ià(
+obj
+.
+	`g‘Stud’tId
+().
+	`equ®s
+(
+¡ud’tId
+))
+
+70 
+li¡
+.
+	`add
+(
+	`»Œ›veCour£
+(
+obj
+.
+	`g‘Cour£Id
+()));
+
+72  
+li¡
+;
+
+73 
+	}
+}
+
+75 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+	$»Œ›veStud’tsFÜACour£
+(
+SŒšg
+ 
+cour£Id
+) {
+
+76 
+Cour£
+ 
+cour£
+ = 
+	`»Œ›veCour£
+(
+cour£Id
+);
+
+77 
+Li¡
+<
+Stud’t
+> 
+li¡
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+78 ià(
+cour£
+ !ğ
+nuÎ
+) {
+
+79 
+Stud’tsCour£sM­pšg
+ 
+obj
+ : 
+¡ud’tsCour£sM­pšgs
+)
+
+80 ià(
+obj
+.
+	`g‘Cour£Id
+().
+	`equ®s
+(
+cour£Id
+))
+
+81 
+li¡
+.
+	`add
+(
+	`»Œ›veStud’t
+(
+obj
+.
+	`g‘Stud’tId
+()));
+
+83  
+li¡
+;
+
+84 
+	}
+}
+
+86 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+	$g‘Cour£s
+() {
+
+87  
+cour£s
+;
+
+88 
+	}
+}
+
+90 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+	$g‘Stud’ts
+() {
+
+91  
+¡ud’ts
+;
+
+92 
+	}
+}
+
+94 
+public
+ 
+	$addCour£
+(
+Cour£
+ 
+cour£
+) {
+
+95 
+cour£s
+.
+	`add
+(
+cour£
+);
+
+96 
+	}
+}
+
+98 
+public
+ 
+	$addStud’t
+(
+Stud’t
+ 
+¡ud’t
+) {
+
+99 
+¡ud’ts
+.
+	`add
+(
+¡ud’t
+);
+
+100 
+	}
+}
+
+102 
+public
+ 
+	gLi¡
+<
+	gStud’tsCour£sM­pšg
+> 
+	$g‘Stud’tsCour£sM­pšgs
+() {
+
+103  
+¡ud’tsCour£sM­pšgs
+;
+
+104 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/handler/EnrollmentServiceDb.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+.
+	gCour£R•os™Üy
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+.
+	gStud’tR•os™Üy
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCompÚ’t
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	g¡»am
+.
+	gCŞËùÜs
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	g¡»am
+.
+	gSŒ—mSuµÜt
+;
+
+16 @
+CompÚ’t
+
+
+17 
+public
+ cÏs 
+	cEÄŞlm’tS”viûDb
+ {
+
+19 @
+Autowœed
+
+
+20 
+´iv©e
+ 
+Cour£R•os™Üy
+ 
+	mcour£R•os™Üy
+;
+
+21 @
+Autowœed
+
+
+22 
+´iv©e
+ 
+Stud’tR•os™Üy
+ 
+	m¡ud’tR•os™Üy
+;
+
+24 
+public
+ 
+Stud’t
+ 
+	$»Œ›veStud’t
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+25  
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+).
+	`g‘
+();
+
+28 
+public
+ 
+Cour£
+ 
+	$»Œ›veCour£
+(
+SŒšg
+ 
+cour£Id
+) {
+
+29  
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+).
+	`g‘
+();
+
+30 
+	}
+}
+
+32 
+public
+ 
+boŞ—n
+ 
+	$’rŞlInACour£
+(
+SŒšg
+ 
+¡ud’tId
+, SŒšg 
+cour£Id
+) {
+
+33 
+Stud’t
+ 
+¡ud’t
+ = 
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+).
+	`g‘
+();
+
+34 
+Cour£
+ 
+cour£
+ = 
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+).
+	`g‘
+();
+
+36 
+Li¡
+<
+Cour£
+> 
+cour£s
+ = 
+¡ud’t
+.
+	`g‘Cour£s
+();
+
+37 ià(
+cour£s
+ =ğ
+nuÎ
+) {
+
+38 
+cour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+40 
+cour£s
+.
+	`add
+(
+cour£
+);
+
+41 
+¡ud’t
+.
+	`£tCour£s
+(
+cour£s
+);
+
+43 
+Stud’t
+ 
+»t1
+ = 
+¡ud’tR•os™Üy
+.
+	`§ve
+(
+¡ud’t
+);
+
+55  (
+»t1
+ !ğ
+nuÎ
+ ) ? 
+Œue
+ : 
+çl£
+;
+
+56 
+	}
+}
+
+58 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+	$»Œ›veCour£sFÜAStud’t
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+60  
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+).
+	`g‘
+().
+	`g‘Cour£s
+();
+
+61 
+	}
+}
+
+63 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+	$»Œ›veStud’tsFÜACour£
+(
+SŒšg
+ 
+cour£Id
+) {
+
+65  
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+).
+	`g‘
+().
+	`g‘Stud’ts
+();
+
+66 
+	}
+}
+
+68 
+public
+ 
+	gLi¡
+<
+	gCour£
+> 
+	$g‘Cour£s
+() {
+
+69  
+SŒ—mSuµÜt
+.
+	`¡»am
+(
+cour£R•os™Üy
+.
+	`fšdAÎ
+().
+	`¥l™”©Ü
+(), 
+çl£
+)
+
+70 .
+	`cŞËù
+(
+CŞËùÜs
+.
+	`toLi¡
+());
+
+71 
+	}
+}
+
+74 
+public
+ 
+	gLi¡
+<
+	gStud’t
+> 
+	$g‘Stud’ts
+() {
+
+75  
+SŒ—mSuµÜt
+.
+	`¡»am
+(
+¡ud’tR•os™Üy
+.
+	`fšdAÎ
+().
+	`¥l™”©Ü
+(), 
+çl£
+)
+
+76 .
+	`cŞËù
+(
+CŞËùÜs
+.
+	`toLi¡
+());
+
+77 
+	}
+}
+
+79 
+public
+ 
+Cour£
+ 
+	$addCour£
+(
+Cour£
+ 
+cour£
+) {
+
+80 
+Cour£
+ 
+cour£1
+ = 
+cour£R•os™Üy
+.
+	`§ve
+(
+cour£
+);
+
+81  
+cour£1
+;
+
+82 
+	}
+}
+
+84 
+public
+ 
+Stud’t
+ 
+	$addStud’t
+(
+Stud’t
+ 
+¡ud’t
+) {
+
+85 
+Stud’t
+ 
+¡ud’t1
+ = 
+¡ud’tR•os™Üy
+.
+	`§ve
+(
+¡ud’t
+);
+
+86  
+¡ud’t1
+;
+
+87 
+	}
+}
+
+89 
+public
+ 
+	gLi¡
+<
+	gStud’tsCour£sM­pšg
+> 
+	$g‘Stud’tsCour£sM­pšgs
+() {
+
+90 
+I‹¿bË
+<
+Stud’t
+> 
+¡ud’ts
+ = 
+¡ud’tR•os™Üy
+.
+	`fšdAÎ
+();
+
+91 
+Li¡
+<
+Stud’tsCour£sM­pšg
+> 
+¡ud’tsCour£sM­pšgs
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+92 
+Stud’t
+ 
+¡ud’t
+ : 
+¡ud’ts
+) {
+
+93 
+Cour£
+ 
+cour£
+ : 
+¡ud’t
+.
+	`g‘Cour£s
+()) {
+
+94 
+Stud’tsCour£sM­pšg
+ 
+¡ud’tsCour£sM­pšg
+ =
+
+95 
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+(
+¡ud’t
+.
+	`g‘Stud’tId
+(), 
+cour£
+.
+	`g‘Cour£Id
+());
+
+96 
+¡ud’tsCour£sM­pšgs
+.
+	`add
+(
+¡ud’tsCour£sM­pšg
+);
+
+100  
+¡ud’tsCour£sM­pšgs
+;
+
+101 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/handler/MapValidationErrorService.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gH‰pStus
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gRe¥Ú£EÁ™y
+;
+
+5 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gCompÚ’t
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g¡”eÙy³
+.
+	gS”viû
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gv®id©iÚ
+.
+	gBšdšgResuÉ
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gv®id©iÚ
+.
+	gF›ldE¼Ü
+;
+
+10 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gHashM­
+;
+
+11 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gM­
+;
+
+13 @
+S”viû
+
+
+14 
+public
+ cÏs 
+	cM­V®id©iÚE¼ÜS”viû
+ {
+
+15 
+public
+ 
+	mRe¥Ú£EÁ™y
+<?> 
+	$M­V®id©iÚS”viû
+(
+BšdšgResuÉ
+ 
+»suÉ
+){
+
+17 if(
+»suÉ
+.
+	`hasE¼Üs
+()){
+
+18 
+M­
+<
+SŒšg
+, SŒšg> 
+”rÜM­
+ = 
+Ãw
+ 
+HashM­
+<>();
+
+20 
+F›ldE¼Ü
+ 
+”rÜ
+: 
+»suÉ
+.
+	`g‘F›ldE¼Üs
+()){
+
+21 
+”rÜM­
+.
+	`put
+(
+”rÜ
+.
+	`g‘F›ld
+(),ƒ¼Ü.
+	`g‘DeçuÉMes§ge
+());
+
+23  
+Ãw
+ 
+Re¥Ú£EÁ™y
+<
+M­
+<
+SŒšg
+, SŒšg>>(
+”rÜM­
+, 
+H‰pStus
+.
+BAD_REQUEST
+);
+
+26  
+nuÎ
+;
+
+29 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/handler/StudentsCoursesMapping.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+public
+ cÏs 
+	cStud’tsCour£sM­pšg
+ {
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	m¡ud’tId
+;
+
+5 
+´iv©e
+ 
+SŒšg
+ 
+	mcour£Id
+;
+
+7 
+public
+ 
+	$Stud’tsCour£sM­pšg
+() {
+
+10 
+public
+ 
+	$Stud’tsCour£sM­pšg
+(
+SŒšg
+ 
+¡ud’tId
+, SŒšg 
+cour£Id
+) {
+
+11 
+this
+.
+¡ud’tId
+ = studentId;
+
+12 
+this
+.
+cour£Id
+ = courseId;
+
+13 
+	}
+}
+
+15 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’tId
+() {
+
+16  
+¡ud’tId
+;
+
+17 
+	}
+}
+
+19 
+public
+ 
+SŒšg
+ 
+	$g‘Cour£Id
+() {
+
+20  
+cour£Id
+;
+
+21 
+	}
+}
+
+23 
+public
+ 
+	$£tStud’tId
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+24 
+this
+.
+¡ud’tId
+ = studentId;
+
+25 
+	}
+}
+
+27 
+public
+ 
+	$£tCour£Id
+(
+SŒšg
+ 
+cour£Id
+) {
+
+28 
+this
+.
+cour£Id
+ = courseId;
+
+29 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/model/Course.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+;
+
+3 
+public
+ cÏs 
+	cCour£
+ {
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	mÇme
+;
+
+5 
+´iv©e
+ 
+SŒšg
+ 
+	mofã»dBy
+;
+
+6 
+´iv©e
+ 
+SŒšg
+ 
+	mcour£Id
+;
+
+8 
+public
+ 
+	$Cour£
+(
+SŒšg
+ 
+Çme
+, SŒšg 
+ofã»dBy
+, SŒšg 
+cour£Id
+) {
+
+9 
+this
+.
+Çme
+ =‚ame;
+
+10 
+this
+.
+ofã»dBy
+ = offeredBy;
+
+11 
+this
+.
+cour£Id
+ = courseId;
+
+14 
+public
+ 
+SŒšg
+ 
+	$g‘Name
+() {
+
+15  
+Çme
+;
+
+16 
+	}
+}
+
+18 
+public
+ 
+SŒšg
+ 
+	$g‘Ofã»dBy
+() {
+
+19  
+ofã»dBy
+;
+
+20 
+	}
+}
+
+22 
+public
+ 
+SŒšg
+ 
+	$g‘Cour£Id
+() {
+
+23  
+cour£Id
+;
+
+24 
+	}
+}
+
+26 
+public
+ 
+	$£tName
+(
+SŒšg
+ 
+Çme
+) {
+
+27 
+this
+.
+Çme
+ =‚ame;
+
+28 
+	}
+}
+
+30 
+public
+ 
+	$£tOfã»dBy
+(
+SŒšg
+ 
+ofã»dBy
+) {
+
+31 
+this
+.
+ofã»dBy
+ = offeredBy;
+
+32 
+	}
+}
+
+34 
+public
+ 
+	$£tCour£Id
+(
+SŒšg
+ 
+cour£Id
+) {
+
+35 
+this
+.
+cour£Id
+ = courseId;
+
+36 
+	}
+}
+
+	@demo/src/main/java/com/example/enrollment/model/Student.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+;
+
+3 
+public
+ cÏs 
+	cStud’t
+ {
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	mfœ¡Name
+;
+
+5 
+´iv©e
+ 
+SŒšg
+ 
+	mÏ¡Name
+;
+
+6 
+´iv©e
+ 
+SŒšg
+ 
+	mema
+;
+
+7 
+´iv©e
+ 
+SŒšg
+ 
+	m¡ud’tId
+;
+
+9 
+public
+ 
+	$Stud’t
+(
+SŒšg
+ 
+fœ¡Name
+, SŒšg 
+Ï¡Name
+, SŒšg 
+ema
+, SŒšg 
+¡ud’tId
+) {
+
+10 
+this
+.
+fœ¡Name
+ = firstName;
+
+11 
+this
+.
+Ï¡Name
+ =†astName;
+
+12 
+this
+.
+ema
+ =ƒmail;
+
+13 
+this
+.
+¡ud’tId
+ = studentId;
+
+16 
+public
+ 
+SŒšg
+ 
+	$g‘Fœ¡Name
+() {
+
+17  
+fœ¡Name
+;
+
+18 
+	}
+}
+
+20 
+public
+ 
+SŒšg
+ 
+	$g‘La¡Name
+() {
+
+21  
+Ï¡Name
+;
+
+22 
+	}
+}
+
+24 
+public
+ 
+SŒšg
+ 
+	$g‘Ema
+() {
+
+25  
+ema
+;
+
+26 
+	}
+}
+
+28 
+public
+ 
+SŒšg
+ 
+	$g‘Stud’tId
+() {
+
+29  
+¡ud’tId
+;
+
+30 
+	}
+}
+
+32 
+public
+ 
+	$£tFœ¡Name
+(
+SŒšg
+ 
+fœ¡Name
+) {
+
+33 
+this
+.
+fœ¡Name
+ = firstName;
+
+34 
+	}
+}
+
+36 
+public
+ 
+	$£tLa¡Name
+(
+SŒšg
+ 
+Ï¡Name
+) {
+
+37 
+this
+.
+Ï¡Name
+ =†astName;
+
+38 
+	}
+}
+
+40 
+public
+ 
+	$£tEma
+(
+SŒšg
+ 
+ema
+) {
+
+41 
+this
+.
+ema
+ =ƒmail;
+
+42 
+	}
+}
+
+44 
+public
+ 
+	$£tStud’tId
+(
+SŒšg
+ 
+¡ud’tId
+) {
+
+45 
+this
+.
+¡ud’tId
+ = studentId;
+
+46 
+	}
+}
+
+	@demo/src/test/java/com/example/enrollment/DemoApplicationTests.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gTe¡
+;
+
+4 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gS´šgBoÙTe¡
+;
+
+6 @
+S´šgBoÙTe¡
+
+
+7 şas 
+	cDemoAµliÿtiÚTe¡s
+ {
+
+9 @
+Te¡
+
+
+10 
+	$cÚ‹xtLßds
+() {
+
+13 
+	}
+}
+
+	@demo/src/test/java/com/example/enrollment/controller/CourseEnrollmentControllerDbTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gcÚŒŞËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gStud’tsCour£sM­pšg
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+.
+	gEÄŞlm’tS”viûDb
+;
+
+7 
+impÜt
+ 
+	gcom
+.
+	gç¡”xml
+.
+	gjacksÚ
+.
+	gd©abšd
+.
+	gObjeùM­³r
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gBefÜeEach
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gTe¡
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+11 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	g‹¡
+.
+	gautocÚfigu»
+.
+	gweb
+.
+	g£rvËt
+.
+	gWebMvcTe¡
+;
+
+12 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	g‹¡
+.
+	gmock
+.
+	gmock™o
+.
+	gMockB—n
+;
+
+13 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gh‰p
+.
+	gMedŸTy³
+;
+
+14 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	gMockMvc
+;
+
+16 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+17 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	ghamüe¡
+.
+	gM©ch”s
+.
+	ghasSize
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+21 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gg‘
+;
+
+22 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»que¡
+.
+	gMockMvcReque¡Bud”s
+.
+	gpo¡
+;
+
+23 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	g‹¡
+.
+	gweb
+.
+	g£rvËt
+.
+	g»suÉ
+.
+	gMockMvcResuÉM©ch”s
+.*;
+
+25 @
+	$WebMvcTe¡
+(
+Cour£EÄŞlm’tCÚŒŞËrDb
+.
+şass
+)
+
+26 şas 
+	cCour£EÄŞlm’tCÚŒŞËrDbTe¡
+ {
+
+28 @
+Autowœed
+
+
+29 
+´iv©e
+ 
+MockMvc
+ 
+mockMvc
+;
+
+31 @
+MockB—n
+
+
+32 
+EÄŞlm’tS”viûDb
+ 
+’rŞlm’tS”viû
+;
+
+34 
+´iv©e
+ 
+Stud’t
+ 
+¡ud’t
+;
+
+35 
+´iv©e
+ 
+Cour£
+ 
+cour£
+;
+
+36 
+´iv©e
+ 
+Stud’tsCour£sM­pšg
+ 
+¡ud’tsCour£sM­pšg
+;
+
+38 
+´iv©e
+ 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+;
+
+39 
+´iv©e
+ 
+Li¡
+<
+Cour£
+> 
+cour£s
+;
+
+40 
+´iv©e
+ 
+Li¡
+<
+Stud’tsCour£sM­pšg
+> 
+¡ud’tsCour£sM­pšgM­pšgs
+;
+
+42 @
+BefÜeEach
+
+
+43 
+	$£tup
+() {
+
+45 
+¡ud’ts
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+46 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+("first", "last", "flast@mail.com", "1");
+
+47 
+¡ud’ts
+.
+	`add
+(
+¡ud’t
+);
+
+49 
+cour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+50 
+cour£
+ = 
+Ãw
+ 
+	`Cour£
+("Python", "Irving", "PY101");
+
+51 
+cour£s
+.
+	`add
+(
+cour£
+);
+
+53 
+¡ud’tsCour£sM­pšgM­pšgs
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+54 
+¡ud’tsCour£sM­pšg
+ =
+
+55 
+Ãw
+ 
+	`Stud’tsCour£sM­pšg
+("1", "PY101");
+
+56 
+¡ud’tsCour£sM­pšgM­pšgs
+.
+	`add
+(
+¡ud’tsCour£sM­pšg
+);
+
+176 
+public
+ 
+SŒšg
+ 
+	$asJsÚSŒšg
+(
+fš®
+ 
+Objeù
+ 
+obj
+) {
+
+177 
+Œy
+ {
+
+178  
+Ãw
+ 
+	`ObjeùM­³r
+().
+	`wr™eV®ueAsSŒšg
+(
+obj
+);
+
+179 } 
+	`ÿtch
+ (
+Exû±iÚ
+ 
+e
+) {
+
+180 
+throw
+ 
+Ãw
+ 
+	`RuÁimeExû±iÚ
+(
+e
+);
+
+182 
+	}
+}
+
+	@demo/src/test/java/com/example/enrollment/handler/EnrollmentServiceDbTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+.
+	gCour£R•os™Üy
+;
+
+4 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdao
+.
+	gStud’tR•os™Üy
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gCour£
+;
+
+6 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gdomaš
+.
+	gStud’t
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gTe¡
+;
+
+8 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gb—ns
+.
+	gçùÜy
+.
+	gªnÙ©iÚ
+.
+	gAutowœed
+;
+
+9 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	g‹¡
+.
+	gcÚ‹xt
+.
+	gS´šgBoÙTe¡
+;
+
+10 
+impÜt
+ 
+	gÜg
+.
+	g¥ršgäamewÜk
+.
+	gboÙ
+.
+	g‹¡
+.
+	gmock
+.
+	gmock™o
+.
+	gMockB—n
+;
+
+12 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gA¼ayLi¡
+;
+
+13 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+14 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gO±iÚ®
+;
+
+16 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gAs£¹iÚs
+.*;
+
+17 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gArgum’tM©ch”s
+.
+	gªy
+;
+
+18 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gv”ify
+;
+
+19 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gMock™o
+.
+	gwh’
+;
+
+20 
+impÜt
+ 
+	gÜg
+.
+	gmock™o
+.
+	gš‹º®
+.
+	gv”ifiÿtiÚ
+.
+	gV”ifiÿtiÚModeFaùÜy
+.
+	gtimes
+;
+
+22 @
+S´šgBoÙTe¡
+
+
+23 şas 
+	cEÄŞlm’tS”viûDbTe¡
+ {
+
+25 @
+MockB—n
+
+
+26 
+´iv©e
+ 
+Cour£R•os™Üy
+ 
+	mcour£R•os™Üy
+;
+
+27 @
+MockB—n
+
+
+28 
+´iv©e
+ 
+Stud’tR•os™Üy
+ 
+	m¡ud’tR•os™Üy
+;
+
+29 @
+Autowœed
+
+
+30 
+´iv©e
+ 
+EÄŞlm’tS”viûDb
+ 
+	m’rŞlm’tS”viû
+;
+
+33 @
+Te¡
+
+
+34 
+	$»Œ›veStud’tTe¡
+() {
+
+35 
+SŒšg
+ 
+¡ud’tId
+ = "1";
+
+36 
+Stud’t
+ 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+("first", "last", "flast@mail.com", "1");
+
+37 
+	`wh’
+(
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+¡ud’t
+));
+
+38 
+	`as£¹Equ®s
+(
+¡ud’t
+, 
+’rŞlm’tS”viû
+.
+	`»Œ›veStud’t
+(
+¡ud’tId
+));
+
+39 
+	`v”ify
+(
+¡ud’tR•os™Üy
+, 
+	`times
+(1)).
+	`fšdById
+(
+¡ud’tId
+);
+
+42 @
+Te¡
+
+
+43 
+	$»Œ›veCour£Te¡
+() {
+
+44 
+SŒšg
+ 
+cour£Id
+ = "PY101";
+
+45 
+Cour£
+ 
+cour£
+ = 
+Ãw
+ 
+	`Cour£
+("Python", "Irving", "PY101");
+
+46 
+	`wh’
+(
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+cour£
+));
+
+47 
+	}
+}
+
+49 @
+Te¡
+
+
+50 
+	$’rŞlInACour£Te¡
+() {
+
+51 
+SŒšg
+ 
+id
+ = "1";
+
+52 
+SŒšg
+ 
+cour£Id
+ = "PY101";
+
+53 
+SŒšg
+ 
+¡ud’tId
+ = "1";
+
+54 
+Cour£
+ 
+cour£
+ = 
+Ãw
+ 
+	`Cour£
+();
+
+55 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+56 
+cour£
+.
+	`£tStud’ts
+(
+¡ud’ts
+);
+
+57 
+Li¡
+<
+Cour£
+> 
+cour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+58 
+Stud’t
+ 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+();
+
+59 
+¡ud’t
+.
+	`£tCour£s
+(
+cour£s
+);
+
+60 
+	`wh’
+(
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+cour£
+));
+
+61 
+	`wh’
+(
+cour£R•os™Üy
+.
+	`§ve
+(
+	`ªy
+(
+Cour£
+.
+şass
+))).
+	`th’R‘uº
+(
+cour£
+);
+
+62 
+	`wh’
+(
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+¡ud’t
+));
+
+63 
+	`wh’
+(
+¡ud’tR•os™Üy
+.
+	`§ve
+(
+	`ªy
+(
+Stud’t
+.
+şass
+))).
+	`th’R‘uº
+(
+¡ud’t
+);
+
+64 
+	`as£¹Equ®s
+(
+Œue
+, 
+’rŞlm’tS”viû
+.
+	`’rŞlInACour£
+(
+¡ud’tId
+, 
+cour£Id
+));
+
+65 
+	}
+}
+
+67 @
+Te¡
+
+
+68 
+	$»Œ›veCour£sFÜAStud’tTe¡
+() {
+
+69 
+SŒšg
+ 
+¡ud’tId
+ = "1";
+
+70 
+Li¡
+<
+Cour£
+> 
+cour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+71 
+Stud’t
+ 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+("first", "last", "flast@mail.com", "1");
+
+72 
+¡ud’t
+.
+	`£tCour£s
+(
+cour£s
+);
+
+74 
+	`wh’
+(
+¡ud’tR•os™Üy
+.
+	`fšdById
+(
+¡ud’tId
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+¡ud’t
+));
+
+75 
+	`as£¹Equ®s
+(
+cour£s
+, 
+’rŞlm’tS”viû
+.
+	`»Œ›veCour£sFÜAStud’t
+(
+¡ud’tId
+));
+
+76 
+	}
+}
+
+78 @
+Te¡
+
+
+79 
+	$»Œ›veStud’tsFÜACour£Te¡
+() {
+
+80 
+SŒšg
+ 
+cour£Id
+ = "PY101";
+
+81 
+Cour£
+ 
+cour£
+ = 
+Ãw
+ 
+	`Cour£
+("PythÚ", "Irvšg", 
+cour£Id
+);
+
+82 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+83 
+cour£
+.
+	`£tStud’ts
+(
+¡ud’ts
+);
+
+84 
+	`wh’
+(
+cour£R•os™Üy
+.
+	`fšdById
+(
+cour£Id
+)).
+	`th’R‘uº
+(
+O±iÚ®
+.
+	`of
+(
+cour£
+));
+
+85 
+	`as£¹Equ®s
+(
+¡ud’ts
+, 
+’rŞlm’tS”viû
+.
+	`»Œ›veStud’tsFÜACour£
+(
+cour£Id
+));
+
+86 
+	}
+}
+
+88 @
+Te¡
+
+
+89 
+	$g‘Cour£sTe¡
+() {
+
+90 
+Li¡
+<
+Cour£
+> 
+cour£s
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+91 
+Cour£
+ 
+cour£
+ = 
+Ãw
+ 
+	`Cour£
+("Python", "Irving", "PY101");
+
+92 
+cour£s
+.
+	`add
+(
+cour£
+);
+
+93 
+	`wh’
+(
+cour£R•os™Üy
+.
+	`fšdAÎ
+()).
+	`th’R‘uº
+(
+cour£s
+);
+
+94 
+	`as£¹Equ®s
+(
+cour£s
+, 
+’rŞlm’tS”viû
+.
+	`g‘Cour£s
+());
+
+95 
+	}
+}
+
+97 @
+Te¡
+
+
+98 
+	$g‘Stud’tsTe¡
+() {
+
+99 
+Li¡
+<
+Stud’t
+> 
+¡ud’ts
+ = 
+Ãw
+ 
+A¼ayLi¡
+<>();
+
+100 
+Stud’t
+ 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+("first", "last", "flast@mail.com", "1");
+
+101 
+¡ud’ts
+.
+	`add
+(
+¡ud’t
+);
+
+102 
+	`wh’
+(
+¡ud’tR•os™Üy
+.
+	`fšdAÎ
+()).
+	`th’R‘uº
+(
+¡ud’ts
+);
+
+103 
+	`as£¹Equ®s
+(
+¡ud’ts
+, 
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+());
+
+104 
+	}
+}
+
+	@demo/src/test/java/com/example/enrollment/handler/EnrollmentServiceTest.java
+
+1 
+·ckage
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	ghªdËr
+;
+
+3 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gAs£¹iÚs
+.
+	gas£¹Equ®s
+;
+
+5 
+impÜt
+ 
+	gcom
+.
+	gexam¶e
+.
+	g’rŞlm’t
+.
+	gmod–
+.
+	gStud’t
+;
+
+6 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gBefÜeEach
+;
+
+7 
+impÜt
+ 
+	gÜg
+.
+	gjun™
+.
+	gjup™”
+.
+	g­i
+.
+	gTe¡
+;
+
+9 
+public
+ cÏs 
+	cEÄŞlm’tS”viûTe¡
+ {
+
+10 
+´iv©e
+ 
+EÄŞlm’tS”viû
+ 
+	m’rŞlm’tS”viû
+;
+
+12 @
+BefÜeEach
+
+
+13 
+	$£tup
+() {
+
+14 
+’rŞlm’tS”viû
+ = 
+Ãw
+ 
+	`EÄŞlm’tS”viû
+();
+
+16 @
+Te¡
+
+
+17 
+	$v”ifyAddStud’t
+() {
+
+18 
+	`as£¹Equ®s
+(4,
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+().
+	`size
+());
+
+19 
+Stud’t
+ 
+¡ud’t
+ = 
+Ãw
+ 
+	`Stud’t
+("Ikhlas","Ahmed","ike.ahmed@outlook.com","1");
+
+20 
+’rŞlm’tS”viû
+.
+	`addStud’t
+(
+¡ud’t
+);
+
+21 
+	`as£¹Equ®s
+(
+¡ud’t
+.
+	`g‘Fœ¡Name
+(), 
+’rŞlm’tS”viû
+.
+	`»Œ›veStud’t
+("1").getFirstName());
+
+22 
+	`as£¹Equ®s
+(5,
+’rŞlm’tS”viû
+.
+	`g‘Stud’ts
+().
+	`size
+());
+
+23 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+20
+1468
+demo/src/main/java/com/example/enrollment/CourseEnrollmentApplication.java
+demo/src/main/java/com/example/enrollment/controller/BaseController.java
+demo/src/main/java/com/example/enrollment/controller/CourseEnrollmentController.java
+demo/src/main/java/com/example/enrollment/controller/CourseEnrollmentControllerDb.java
+demo/src/main/java/com/example/enrollment/controller/HomeController.java
+demo/src/main/java/com/example/enrollment/controller/WebController.java
+demo/src/main/java/com/example/enrollment/dao/CourseRepository.java
+demo/src/main/java/com/example/enrollment/dao/StudentRepository.java
+demo/src/main/java/com/example/enrollment/domain/Course.java
+demo/src/main/java/com/example/enrollment/domain/Student.java
+demo/src/main/java/com/example/enrollment/handler/EnrollmentService.java
+demo/src/main/java/com/example/enrollment/handler/EnrollmentServiceDb.java
+demo/src/main/java/com/example/enrollment/handler/MapValidationErrorService.java
+demo/src/main/java/com/example/enrollment/handler/StudentsCoursesMapping.java
+demo/src/main/java/com/example/enrollment/model/Course.java
+demo/src/main/java/com/example/enrollment/model/Student.java
+demo/src/test/java/com/example/enrollment/DemoApplicationTests.java
+demo/src/test/java/com/example/enrollment/controller/CourseEnrollmentControllerDbTest.java
+demo/src/test/java/com/example/enrollment/handler/EnrollmentServiceDbTest.java
+demo/src/test/java/com/example/enrollment/handler/EnrollmentServiceTest.java
