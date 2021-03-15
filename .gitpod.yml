@@ -13,4 +13,4 @@ tasks:
              cp /workspace/homework/cscope_maps.vim ~/.vim/plugin/. && \
              cd /workspace/homework && \
              cscope -b
-    command: cd /workspace/homework/demo && gradle bootRun
+#    command: cd /workspace/homework/demo && gradle bootRun
