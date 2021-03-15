@@ -8,8 +8,8 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: mkdir -p ~/.vim/plugin && \
-          cp /workspace/homework/cscope_maps.vim ~/.vim/plugin/. && \
+  - init: mkdir -p ~/.vim/plugin
+    command: cp /workspace/homework/cscope_maps.vim ~/.vim/plugin/. && \
           cd /workspace/homework && \
           cscope -b
     command: cd /workspace/homework/demo && gradle bootRun
