@@ -15,6 +15,11 @@ public class CourseEnrollmentControllerDb {
 
 @Autowired private EnrollmentServiceDb enrollmentService;
 
+    @GetMapping("/")
+    public String index() {
+        return "Greeting from  Spring Boot!";
+    }
+
     @GetMapping("/students")
     public List<Student> getStudents() {
         return enrollmentService.getStudents();
