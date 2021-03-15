@@ -10,6 +10,6 @@ ports:
 tasks:
   - init: mkdir -p ~/.vim/plugin
     command: cp /workspace/homework/cscope_maps.vim ~/.vim/plugin/. && \
-          cd /workspace/homework && \
-          cscope -b
+             cd /workspace/homework && \
+             cscope -b
     command: cd /workspace/homework/demo && gradle bootRun
