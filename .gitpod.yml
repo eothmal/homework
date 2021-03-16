@@ -10,4 +10,4 @@ ports:
 tasks:
   - init: mkdir -p ~/.vim/plugin
     command: cd /workspace/homework && ./set_cscope.sh
-#    command: cd /workspace/homework/demo && gradle bootRun
+    command: cd /workspace/homework/demo && gradle bootRun
