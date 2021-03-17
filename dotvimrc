@@ -107,6 +107,8 @@ nmap  <F3> <C-W>w<CR>
 " pf4 excute command on the line
 "nmap <F4> "ryy@r
 map #4 "ryy@r
+nmap <silent><F5> :SBufExplorer<cr>
+nmap <silent><F6> :BufExplorer<cr>
 
 "
 "
