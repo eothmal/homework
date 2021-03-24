@@ -110,6 +110,11 @@ map #4 "ryy@r
 nmap <silent><F5> :SBufExplorer<cr>
 nmap <silent><F6> :BufExplorer<cr>
 
+"in case no PF key
+nmap <C-\>3 :split><CR>	
+nmap <C-\>4 "ryy@r<CR>	
+nmap <C-\>5 :SBufExplorer<cr>
+nmap <C-\>6 :BufExplorer<cr>
 "
 "
     if has("cscope")
